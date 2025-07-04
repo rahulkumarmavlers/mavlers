@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+    body {
+        @apply font-primary text-base leading-[1.61] text-text_primary bg-primary;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing:antialiased;
+    }
+}
+::selection{
+    @apply bg-secondary bg-opacity-50;
+}
+
