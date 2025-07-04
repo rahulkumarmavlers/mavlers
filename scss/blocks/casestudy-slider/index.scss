@@ -1,0 +1,341 @@
+@import "~styles/config";
+
+.casestudy-slider-block {
+  position: relative;
+  overflow: hidden;
+  padding: 60px 0 70px;
+  background-color: $grey--light;
+
+  @include r(tablet-max) {
+    padding: 42px 0 70px;
+  }
+
+  @include r(tablet-small) {
+    padding: 42px 0 81px;
+  }
+
+  &__heading {
+    margin-bottom: 53px;
+
+    @include r(tablet-small) {
+      margin-bottom: 42px;
+    }
+
+    p {
+      margin-bottom: 12px;
+
+      @include r(tablet-small) {
+        margin-bottom: 7px;
+      }
+
+      span {
+        display: block;
+        font-size: 14px;
+        letter-spacing: 3.5px;
+        text-transform: uppercase;
+
+        @include r(laptop-small) {
+          font-size: 13px;
+        }
+
+        @include r(tablet-small) {
+          font-size: 12px;
+          letter-spacing: 3px;
+        }
+      }
+    }
+
+    h3 {
+      margin-top: 0;
+      color: $green;
+
+      @include r(tablet-small) {
+        font-size: 28px;
+      }
+    }
+  }
+
+  &__slider {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: calc(-100% - 5px);
+      width: 100%;
+      background: $grey--light;
+    }
+
+    .flickity-viewport {
+      overflow: inherit;
+
+      @include r(tablet-small) {
+        overflow: hidden;
+      }
+    }
+
+    .flickity-prev-next-button {
+      top: auto;
+      bottom: -17px;
+      border-color: $green--dark;
+
+      &.previous {
+        &::after {
+          background-image: url("~img/icons/dark-green-slider-arrow-left.svg");
+        }
+      }
+
+      &.next {
+        &::after {
+          background-image: url("~img/icons/dark-green-slider-arrow-right.svg");
+        }
+      }
+    }
+
+    .flickity-page-dots {
+      position: static;
+      justify-content: flex-start;
+      margin-top: 63px;
+      margin-bottom: 20px;
+      text-align: left;
+
+      @include r(tablet-small) {
+        margin-top: 38px;
+      }
+
+      .flickity-page-dot,
+      .dot {
+        &.is-selected {
+          background: $green--dark;
+        }
+      }
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    width: 93.5%;
+    text-decoration: none;
+    color: inherit;
+    opacity: 0.5;
+    transition: opacity $a-short ease-in-out;
+
+    @include r(tablet-max) {
+      width: 98%;
+    }
+
+    @include r(tablet-small) {
+      width: 100%;
+    }
+
+    &.is-selected {
+      opacity: 1;
+    }
+  }
+
+  &__image {
+    width: 36.8%;
+    margin-top: 10px;
+    margin-bottom: auto;
+    padding-bottom: 34.5%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    @include r(tablet-max) {
+      margin-top: 0;
+    }
+
+    @include r(tablet-small) {
+      width: 100%;
+      margin: 0;
+      margin-bottom: 25px;
+      padding-bottom: 61.5%;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 63.2%;
+    max-width: 687px;
+    padding-left: 68px;
+    padding-right: 70px;
+
+    @include r(laptop-small) {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    @include r(tablet-max) {
+      padding-left: 30px;
+      padding-right: 25px;
+    }
+
+    @include r(tablet-small) {
+      width: 100%;
+      max-width: none;
+      padding: 0;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      padding-right: 30px;
+      color: $green--dark;
+
+      @include r(laptop-small) {
+        padding-right: 0;
+      }
+
+      @include r(tablet-small) {
+        color: $green--dark;
+      }
+    }
+
+    p {
+      max-width: 500px;
+      margin-top: 0;
+      font-size: 18px;
+      font-weight: $f-medium;
+      line-height: 26px;
+
+      @include r(laptop-small) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      @include r(tablet-max) {
+        font-size: 15px;
+        line-height: 23px;
+      }
+
+      @include r(tablet-small) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    .btn {
+      margin-top: auto;
+    }
+  }
+
+  &__states {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% + 16px);
+    margin: 8px -8px 0;
+    margin-bottom: 30px;
+
+    @include r(tablet-small) {
+      margin: 2px -8px 26px;
+    }
+  }
+
+  &__numcol {
+    width: 50%;
+    padding: 0 8px;
+
+    @include r(tablet-max) {
+      width: 100%;
+      margin-bottom: 24px;
+    }
+
+    &:last-child {
+      @include r(tablet-max) {
+        margin-bottom: 0;
+      }
+    }
+
+    &__wrap {
+      height: 100%;
+      padding: 12px 18px;
+      background: $grey;
+    }
+
+    &:only-child {
+      width: 100%;
+
+      .casestudy-slider-block__numcol__wrap {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .casestudy-slider-block__numcol__left {
+        width: 15%;
+        padding-right: 20px;
+
+        @include r(tablet-max) {
+          width: 100%;
+          padding-right: 0;
+        }
+      }
+
+      .casestudy-slider-block__numcol__right {
+        width: 77%;
+
+        @include r(tablet-max) {
+          width: 100%;
+        }
+      }
+    }
+
+    &__left {
+      p {
+        font-family: $kamerik;
+        font-size: 36px;
+        line-height: 48px;
+        color: $green--dark;
+
+        @include r(laptop-small) {
+          font-size: 30px;
+          line-height: 40px;
+        }
+
+        @include r(tablet-max) {
+          font-size: 26px;
+          line-height: 34px;
+        }
+
+        @include r(tablet-small) {
+          font-size: 36px;
+          line-height: 48px;
+        }
+
+        sup {
+          font-family: $orkney;
+          font-size: 20px;
+          font-weight: $f-bold;
+          line-height: 28px;
+
+          @include r(tablet-small) {
+            font-size: 20px;
+            line-height: 28px;
+          }
+        }
+      }
+    }
+
+    &__right {
+      p {
+        font-size: 14px;
+        font-weight: $f-regular;
+        line-height: 20px;
+
+        @include r(laptop-small) {
+          font-size: 13px;
+        }
+
+        @include r(tablet-small) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

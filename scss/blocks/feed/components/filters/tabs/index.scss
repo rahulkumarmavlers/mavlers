@@ -1,0 +1,25 @@
+// -----------------------------------------------------------------------------
+// FEED FILTERS :: TABS
+// -----------------------------------------------------------------------------
+
+@import "~styles/config";
+@import "../filter-options-list";
+@import "tab-header";
+@import "tab-content";
+
+// Mobile bits
+@import "filters-mobile";
+@import "../accordion";
+
+.feed-filters-tabs {
+  .filter-tabs__wrapper {
+    border-top: 1px solid $green--dark;
+    border-bottom: 1px solid $green--dark;
+  }
+
+  //.filter-tabs__container {}
+
+  @include r(tablet, mobile) {
+    display: none;
+  }
+}

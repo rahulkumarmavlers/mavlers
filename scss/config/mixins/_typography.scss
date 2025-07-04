@@ -1,0 +1,96 @@
+//
+// Sets typography rules to any element that includes this mixin.
+// Useful to set the base font style for the project.
+//
+@mixin normalised-text {
+  @each $property in $normalised-text-properties {
+    $index: get-list-index($property, $normalised-text-properties);
+
+    #{$property}: get-list-value($index, $normalised-text-values);
+  }
+}
+
+//
+// Adds line-through to text
+//
+@mixin line-through($color) {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 1px;
+    margin: auto;
+    background-color: $color;
+  }
+}
+
+//
+// Adds custom underline to multiline text
+//
+// Taken from:
+// - https://www.youtube.com/watch?v=_1vEGYWaaQY
+//
+@mixin fancy-underline($colour: #000, $thickness: 1px) {
+  background-image: linear-gradient(90deg, $colour, $colour);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 100% $thickness;
+}
+
+@mixin fancy-underline-animated($colour: #000, $thickness: 1px, $animation-speed: 300ms) {
+  @include fancy-underline($colour, $thickness);
+
+  background-size: 0 $thickness;
+  transition: background-size $animation-speed;
+
+  &:hover { background-size: 100% $thickness; }
+}
+
+//
+// Hides text for users, but allows screen readers to see it.
+// Useful to use on buttons with just icons and no text.
+//
+@mixin hide-text() {
+  overflow: hidden;
+  font-size: 0;
+  color: transparent;
+}
+
+//
+// Hides text from users, while allowing screen readers to see it.
+// This is a verbatim copy of Wordpress's .screen-reader-text class
+// which is not being loaded on the site, so we use this mixin instead.
+//
+@mixin screen-reader-text {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  margin: -1px;
+  padding: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  word-wrap: normal !important;
+  word-break: normal;
+}
+
+//
+// Basic link style that can be used inside and outside .wysiwyg
+//
+@mixin link-style {
+  font-weight: $f-bold;
+  text-decoration: underline;
+  color: #000;
+  transition: color 300ms;
+
+  &:hover {
+    color: lighten(#000, 50%);
+  }
+}

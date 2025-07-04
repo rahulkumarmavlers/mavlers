@@ -1,0 +1,74 @@
+// -----------------------------------------------------------------------------
+// SITE SEARCH FILTER - 'DROPDOWN' STYLE
+// -----------------------------------------------------------------------------
+
+.site-search-content {
+  .form-style {
+    align-self: flex-start;
+    border-bottom: 2px solid $black;
+    padding-top: 25px;
+    padding-bottom: 12px;
+  }
+
+  .search-form {
+    .search-form__filters {
+      display: flex;
+      gap: 38px;
+      align-items: center;
+
+      label {
+        flex-grow: 1;
+        flex-shrink: 1;
+        font-size: 18px;
+        font-weight: $f-bold;
+        white-space: nowrap;
+        text-transform: uppercase;
+        color: $black;
+      }
+
+      .choices {
+        flex: 0 1 100%;
+        width: 100%;
+      }
+
+      @include r(mobile) {
+        flex-direction: column;
+        gap: 14px;
+        align-items: flex-start;
+      }
+    }
+
+    //
+    // Custom dropdown (Choices.js plugin)
+    //
+    .choices {
+      $border-style: 1px solid $black;
+
+      border: none;
+
+      &__inner {
+        border: $border-style;
+
+        &::after { right: 20px; }
+      }
+
+      .choices__item {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .choices__list--single {
+        .choices__item {
+          padding-left: 20px;
+          padding-right: 40px;
+          font-size: 18px;
+          text-transform: uppercase;
+        }
+      }
+
+      .choices__list--dropdown {
+        border: $border-style;
+      }
+    }
+  }
+}

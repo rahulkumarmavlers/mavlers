@@ -1,0 +1,250 @@
+// -----------------------------------------------------------------------------
+// BASE FORM STYLES
+// Base styles to common elements in any type of form, Gravity Forms, Hubspot...
+// Style overrides to specific form builders (Gravity Forms, Hubspot...) please
+// add the override file under /vendor-overrides/
+// -----------------------------------------------------------------------------
+
+.form-style {
+  $root: &;
+  $dark: #{$root}--dark;
+  $border-style: 1px solid rgb(35 31 32 / 25%);
+
+  a {
+    font-size: 14px;
+    color: $black--off;
+    transition: color $a-short;
+
+    @include r(mobile) {
+      font-size: 11px;
+      line-height: 14px;
+    }
+
+    &:hover {
+      color: $green;
+    }
+  }
+
+  // Reset styles
+  fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  //
+  // Fields
+  // [1] Gravity forms
+  // [2] Hubspot
+  //
+
+  .gfield_label, // [1]
+  .hs-form-field label {
+    // [2]
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: $black--off;
+
+    @include r(mobile) {
+      font-size: 11px;
+      line-height: 14px;
+    }
+  }
+
+  .gfield, // [1]
+  .hs-form-field {
+    // [2]
+    margin-bottom: 20px;
+
+    @include r(mobile) {
+      margin-bottom: 15px;
+    }
+
+    input[type="date"],
+    input[type="password"],
+    input[type="text"],
+    input[type="url"],
+    input[type="number"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+      box-sizing: border-box;
+      width: 100%;
+      border: $border-style;
+      border-radius: 0;
+      outline: none;
+      padding: 9px 15px;
+      font-family: $base-font-family;
+      font-size: 14px;
+      font-weight: $f-regular;
+      line-height: 20px;
+      color: $black--off;
+      background-color: transparent;
+
+      &:focus {
+        outline: none;
+      }
+
+      @include placeholder-style {
+        font-style: italic;
+        color: $black--off;
+        opacity: 1;
+      }
+
+      @include r(mobile) {
+        padding: 10px 15px;
+        font-size: 11px;
+        line-height: 14px;
+      }
+    }
+
+    textarea {
+      height: 120px;
+      resize: none;
+    }
+
+    // Successful field validation (text inputs only)
+    &.text {
+      .ginput_container {
+        position: relative;
+
+        // Field validated feedback icon
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 10px;
+          z-index: 1;
+          display: none;
+          width: 18px;
+          height: 18px;
+          margin: auto;
+          background-image: url("~img/circle-checked.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+        }
+      }
+    }
+
+    // Shows success feedback icon
+    &.filled-field {
+      .ginput_container {
+        position: relative;
+
+        input {
+          padding-right: 30px;
+        }
+
+        &::before {
+          display: block;
+        }
+      }
+    }
+  }
+
+  // Validation errors
+  .gfield_error {
+    // [1]
+    input,
+    textarea,
+    select {
+      border-color: red;
+    }
+  }
+
+  .gfield_validation_message, // [1]
+  .hs-error-msg {
+    // [2]
+    position: relative;
+    display: flex;
+    margin-top: 9px;
+    font-size: 14px;
+    font-weight: $f-medium;
+    line-height: 18px;
+    color: red !important;
+
+    &.validation_message--hidden-on-empty {
+      display: none;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      flex: 0 0 16px;
+      width: 16px;
+      height: 11px;
+      margin-top: 1px;
+      margin-right: 8px;
+      background-image: url("~img/icons/error-icon.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @include r(mobile) {
+        flex: 0 0 10px;
+        width: 10px;
+        height: 8px;
+        margin-top: 0;
+      }
+    }
+
+    @include r(mobile) {
+      font-size: 11px;
+      line-height: 14px;
+    }
+  }
+
+  .gfield_error .validation_message {
+    // [1]
+    margin-top: 9px;
+    font-size: 14px;
+    font-weight: $f-regular;
+    line-height: 18px;
+    color: red;
+  }
+
+  &--dark {
+    background-color: $green--dark;
+
+    a {
+      color: $white;
+    }
+
+    .gfield_label,
+    .hs-form-field label {
+      color: $white;
+    }
+
+    .choices {
+      &__inner {
+        border-color: $white;
+      }
+
+      &__item {
+        background-color: $white;
+      }
+    }
+
+    .gfield, // [1]
+    .hs-form-field {
+      // [2]
+
+      input[type="date"],
+      input[type="password"],
+      input[type="text"],
+      input[type="url"],
+      input[type="number"],
+      input[type="email"],
+      input[type="tel"],
+      textarea {
+        border-color: $white;
+        background-color: white;
+      }
+    }
+  }
+}

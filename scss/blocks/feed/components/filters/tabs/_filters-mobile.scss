@@ -1,0 +1,178 @@
+//
+// Mobile filters
+//
+.feed-filters-tabs--mobile {
+  display: none;
+
+  @include r(tablet, mobile) {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .show-mobile-filters-screen & {
+    .feed-filters-screen-toggle-btn-wrapper { display: none; }
+  }
+
+  .feed-filters-tabs--mobile__buttons {
+    &.selected {
+      display: flex;
+      flex-direction: column;
+      border-bottom: solid 2px $grey--light;
+      padding: 20px 0;
+      gap: 15px;
+    }
+
+    .clear-filters-btn {
+      border: solid 1px $green--dark;
+      border-radius: 20px;
+      padding: 11px 40px 8px 18px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 13px;
+        right: 14px;
+        display: inline-block;
+        width: 13px;
+        height: 11px;
+        background-image: url("~img/icons/dark-green-cross.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+    }
+
+    .feed-filters-show__btn {
+      .show-results-btn {
+        border: none;
+        padding: 11px 25px 8px;
+        font-weight: $f-bold;
+        color: $white;
+        background-color: $green--dark;
+      }
+    }
+  }
+
+  //
+  // 'Filters' button that opens filters screen
+  //
+  .feed-filters-screen-toggle-btn-wrapper {
+    border-top: 1px solid #c3c3c3;
+    border-bottom: 1px solid #c3c3c3;
+
+    .btn {
+      position: relative;
+      display: block;
+      border: none;
+      border-radius: 0;
+      padding: 14px 16px;
+      font-size: 16px;
+      font-weight: $f-bold;
+      white-space: nowrap;
+      line-height: 1.4;
+      text-transform: uppercase;
+      color: #000;
+      background-color: transparent;
+      cursor: pointer;
+      user-select: none;
+
+      .icon--plus-minus {
+        position: relative;
+        top: -5px;
+        display: inline-block;
+        margin-right: 10px;
+        background-color: #d7d7d7;
+
+        &::before { background-color: #d7d7d7; }
+      }
+
+      .filters-counter {
+        display: inline-block;
+        font-weight: $f-bold;
+        color: $black--off;
+      }
+    }
+  }
+
+  //
+  // Filters screen
+  //
+  .feed-filters-screen {
+    $footerHeight: 104px;
+
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    .btn {
+      margin: 0;
+      padding: 0;
+      cursor: pointer;
+    }
+
+    &__header,
+    &__body,
+    &__footer {
+      padding-left: 30px;
+      padding-right: 30px;
+
+      @include r(mobile) {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+
+    &__header {
+      display: flex;
+      flex-grow: 0;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #e0e0e0;
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      .close-filters-screen-btn {
+        display: block;
+        width: 30px;
+        height: 30px;
+
+        span {
+          display: block;
+          width: 100%;
+          height: 100%;
+          background-color: $black--off; // replace with icon
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+        }
+      }
+
+      .clear-filters-btn {
+        padding: 10px 0 10px 10px;
+        font-size: 16px;
+        font-weight: $f-semibold;
+        text-decoration: underline;
+        color: #000;
+        cursor: pointer;
+      }
+    }
+
+    &__body {
+      flex-grow: 1;
+      overflow: auto;
+      padding-top: 20px;
+      padding-bottom: calc($footerHeight + 20px);
+    }
+
+    &__footer {
+      width: 100%;
+      height: $footerHeight;
+      border-top: 1px solid #e0e0e0;
+      padding-top: 20px;
+      padding-bottom: 40px;
+      text-align: center;
+      background-color: #fff;
+    }
+  }
+}

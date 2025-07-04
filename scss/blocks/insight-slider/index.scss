@@ -1,0 +1,183 @@
+@import "~styles/config";
+
+.insight-slider-block {
+  position: relative;
+  overflow: hidden;
+  padding: 90px 0 120px;
+
+  @include r(laptop-small) {
+    padding: 90px 0;
+  }
+
+  @include r(tablet-max) {
+    padding: 75px 0;
+  }
+
+  @include r(tablet-small) {
+    padding: 70px 0;
+  }
+
+  &__wrap {
+    position: relative;
+    padding-bottom: 94px;
+
+    @include r(tablet-small) {
+      padding-bottom: 81px;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 53px;
+
+    @include r(tablet-small) {
+      margin-bottom: 40px;
+    }
+
+    p {
+      margin-bottom: 12px;
+
+      @include r(tablet-small) {
+        margin-bottom: 5px;
+      }
+
+      span {
+        display: block;
+        font-size: 14px;
+        letter-spacing: 3.5px;
+        text-transform: uppercase;
+
+        @include r(laptop-small) {
+          font-size: 13px;
+        }
+
+        @include r(tablet-small) {
+          font-size: 12px;
+          letter-spacing: 3px;
+        }
+      }
+    }
+
+    h2 {
+      margin-top: 0;
+      color: $green;
+
+      &.dark-green-title {
+        color: $green--dark;
+      }
+    }
+  }
+
+  &__slider {
+    display: flex;
+    flex-wrap: wrap;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -100%;
+      width: 100%;
+      margin-top: -1px;
+      margin-bottom: -1px;
+      margin-left: -2px;
+      background: $white;
+    }
+
+    .flickity-viewport {
+      width: 100%;
+      overflow: inherit;
+    }
+  }
+
+  &__slidercolumn {
+    width: 28.8%;
+    margin-right: 22px;
+
+    @include r(laptop-small) {
+      width: 40%;
+    }
+
+    @include r(tablet-small) {
+      width: 64.6%;
+      margin-right: 20px;
+    }
+  }
+
+  &__sliderlink {
+    display: block;
+    text-decoration: none;
+    color: $black--off;
+    transition: all $a-short ease-in-out;
+
+    &:hover {
+      color: $green;
+
+      .insight-slider-block__img {
+        transform: scale(1.5);
+      }
+    }
+
+    h4 {
+      margin-top: 0;
+      font-family: $orkney;
+    }
+  }
+
+  &__sliderimg {
+    overflow: hidden;
+    margin-bottom: 24px;
+
+    @include r(tablet-small) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    padding-bottom: 65.2%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    transform: scale(1.3);
+    transition: all $a-short ease-in-out;
+
+    @include r(tablet-small) {
+      padding-bottom: 61.2%;
+    }
+  }
+
+  &__tag {
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid $green--dark;
+    border-radius: 20px;
+    margin-bottom: 19px;
+    padding: 6px 11px 5px;
+    font-family: $kamerik;
+    font-size: 12px;
+    font-weight: $f-bold;
+    letter-spacing: 1.5px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: $green--dark;
+
+    @include r(tablet-small) {
+      margin-bottom: 13px;
+      padding: 6px 7px 3px;
+      font-size: 10px;
+      line-height: 12px;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-top: 46px;
+
+    @include r(tablet-small) {
+      margin-top: 38px;
+    }
+  }
+}

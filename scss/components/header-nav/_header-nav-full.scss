@@ -1,0 +1,331 @@
+// -----------------------------------------------------------------------------
+// HEADER NAV - FULL (DESKTOP)
+//
+// IMPORTANT - any colour rules should be set under the corresponding variation
+//             at the end of this file (i.e. .header-nav--white).
+// -----------------------------------------------------------------------------
+
+.header-nav-full {
+  position: relative;
+  z-index: 2;
+  height: auto;
+  transition: background-color $a-short;
+
+  @include r(laptop-small) {
+    display: none;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    .header-nav-full__logo-link {
+      display: block;
+      width: 192px;
+      height: 54px;
+
+      .svg-icon {
+        width: 100%;
+        height: 100%;
+      }
+
+      @include r(laptop-max) {
+        width: 180px;
+      }
+    }
+
+    .header-nav-full__links-section {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+
+      // All buttons except "search" button
+      > .btn:not(.search-overlay-trigger-btn) {
+        align-self: center;
+        padding: 15px 30px 13px;
+
+        &::before { display: none; }
+      }
+    }
+  }
+
+  //
+  // Search button
+  //
+  .search-overlay-trigger-btn {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+  }
+
+  .nav-menu {
+    display: flex;
+    justify-content: flex-end;
+
+    // Top level menu items
+    > .nav-menu-item {
+      transition: background-color $a-short;
+
+      > a {
+        padding: 37px 24px 32px;
+        font-family: $kamerik;
+        font-size: 16px;
+        font-weight: $f-bold;
+        transition: color $a-short;
+      }
+
+      @include r(laptop-max) {
+        > a {
+          padding-left: 18px;
+          padding-right: 18px;
+        }
+      }
+    }
+  }
+
+  //
+  // Dropdown style
+  //
+  .nav-menu__dropdown {
+    position: absolute;
+    width: auto;
+    overflow: hidden;
+    margin: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity $a-short, visibility $a-short, background-color $a-short;
+  }
+
+  .nav-menu-item--mega .nav-menu__submenu[data-depth="2"],
+  .nav-menu-item--simple .nav-menu__submenu {
+    > .nav-menu-item {
+      > a {
+        @include btn-revealing-arrow-style(12px);
+
+        &::before {
+          top: 4px;
+        }
+      }
+    }
+  }
+
+  // Hack - padding added to prevent text in menu items from going to a new line when hovering
+  // due to arrow animation pushing content to the right
+  //.nav-menu-item--mega .nav-menu__submenu[data-depth="2"] > .nav-menu-item > a {
+  //  padding-right: 50px;
+  //}
+
+  //
+  // "Simple" dropdown style
+  //
+  .nav-menu-item--simple {
+    .nav-menu__dropdown {
+      max-width: 300px;
+      min-width: 242px;
+      padding: 36px 24px 15px;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
+  }
+
+  .nav-menu-item--parent {
+    display: none;
+  }
+
+  //
+  // "Mega" dropdown style
+  //
+  .nav-menu-item--mega {
+    .nav-menu__dropdown {
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 100%;
+      max-width: 1042px;
+
+      > .nav-menu__submenu {
+        display: flex;
+        gap: 24px;
+        padding: 36px 48px;
+      }
+    }
+
+    // Second level sub menu
+    .nav-menu__submenu[data-depth="2"] {
+      display: flex;
+      flex-direction: column;
+      margin-top: 12px;
+      gap: 12px;
+    }
+  }
+
+  //
+  // Headroom.js
+  //
+  // Only shows dropdown if header is pinned (visible) or
+  // if the .show-overlay class was added (triggered via JS)
+  //
+  .headroom--top &,
+  .headroom--pinned &,
+  .show-overlay & {
+    .nav-menu-item {
+      &:hover {
+        .nav-menu__dropdown {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  //
+  // Colour variation :: Green
+  //
+  .header-nav--green & {
+    background-color: $green--dark;
+
+    .header-nav-full__content {
+      .header-nav-full__logo-link {
+        .svg-icon {
+          color: $white;
+
+          .svg-symbol { fill: $green; }
+        }
+      }
+    }
+
+    .nav-menu {
+      // Top level menu items
+      > .nav-menu-item {
+        > a { color: $white; }
+
+        @include hover {
+          background-color: $white;
+
+          > a { color: $green--dark; }
+        }
+      }
+    }
+
+    .nav-menu__dropdown { background-color: $white; }
+
+    .search-overlay-trigger-btn { color: $white; }
+  }
+
+  //
+  // Colour variation :: Transparent White Text
+  //
+  .header-nav--transparent & {
+    background-color: transparent;
+
+    .header-nav-full__content {
+      .header-nav-full__logo-link {
+        .svg-icon {
+          color: $white;
+
+          .svg-symbol { fill: $green; }
+        }
+      }
+    }
+
+    .nav-menu {
+      // Top level menu items
+      > .nav-menu-item {
+        > a { color: $white; }
+
+        @include hover {
+          background-color: $white;
+
+          > a { color: $green--dark; }
+        }
+      }
+    }
+
+    .nav-menu__dropdown { background-color: $white; }
+
+    .search-overlay-trigger-btn { color: $white; }
+  }
+
+  //
+  // Colour variation :: Transparent Dark Text
+  //
+  .header-nav--transparent-dark & {
+    background-color: transparent;
+
+    .header-nav-full__content {
+      .header-nav-full__logo-link {
+        .svg-icon {
+          color: #3d4543;
+
+          .svg-symbol { fill: $green; }
+        }
+      }
+    }
+
+    .nav-menu {
+      // Top level menu items
+      > .nav-menu-item {
+        > a { color: $black--off; }
+
+        @include hover {
+          background-color: $green--dark;
+
+          > a { color: $white; }
+        }
+      }
+    }
+
+    .nav-menu__dropdown { background-color: $green--dark; }
+
+    .search-overlay-trigger-btn { color: $black--off; }
+  }
+
+  //
+  // Colour variation :: White
+  //
+  .header-nav--white &,
+  .headroom--not-top & {
+    background-color: $white;
+
+    .header-nav-full__content {
+      .header-nav-full__logo-link {
+        .svg-icon {
+          color: #3d4543;
+
+          .svg-symbol { fill: $green; }
+        }
+      }
+    }
+
+    .nav-menu {
+      // Top level menu items
+      > .nav-menu-item {
+        > a { color: $black--off; }
+
+        @include hover {
+          background-color: $green--dark;
+
+          > a { color: $white; }
+        }
+      }
+    }
+
+    .nav-menu__dropdown { background-color: $green--dark; }
+
+    .search-overlay-trigger-btn { color: $black--off; }
+  }
+
+  .header-nav--transparent.nav-active:not(.headroom--not-top) & {
+    background-color: $green--dark;
+  }
+
+  .header-nav--transparent-dark.nav-active:not(.headroom--not-top) & {
+    background-color: $white;
+  }
+}

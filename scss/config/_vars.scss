@@ -1,0 +1,98 @@
+// -----------------------------------------------------------------------------
+// Colours
+// -----------------------------------------------------------------------------
+$black: #000;
+$black--off: #231f20;
+$white: #fff;
+$grey: #ebebeb;
+$grey--light: #f5f5f5;
+$white--off: #f2f5f0;
+$green: #789904;
+$green--dark: #095540;
+$red: #ff0050;
+$red-light: #ff0250;
+$red-error: #f00;
+$red-fade: #ffd9e4;
+
+// -----------------------------------------------------------------------------
+// Responsive breakpoints
+// -----------------------------------------------------------------------------
+$breakpoints: (
+  "ultrawide"       "(min-width: 1920px)",
+  "desktop-max"     "(max-width: 1919px)",
+  "desktop"         "(min-width: 1440px) and (max-width: 1919px)",
+  "laptop-max"      "(max-width: 1439px)",
+  "laptop"          "(min-width: 1024px) and (max-width: 1439px)",
+  "tablet-max"      "(max-width: 1023px)",
+  "tablet"          "(min-width: 600px) and (max-width: 1023px)",
+  "mobile"          "(max-width: 599px)",
+
+  // edge cases
+  "laptop-small"    "(max-width: 1280px)",
+  "tablet-small"    "(max-width: 767px)"
+);
+
+// -----------------------------------------------------------------------------
+// Typography
+// -----------------------------------------------------------------------------
+
+// Fonts
+$orkney: "Orkney", sans-serif;
+$kamerik: "Kamerik105W00", sans-serif;
+$kamerikBook: "Kamerik105W00-Book", sans-serif;
+
+// Base rules
+$base-font-size: 16px;
+$baseline: 24px;
+$base-line-height: $baseline;
+$base-font-family: $orkney;
+
+// Normalised text properties (for @include normalised-text)
+$normalised-text-properties: (
+  "font-family",
+  "font-size",
+  "line-height"
+);
+
+// Normalised text values (for @include normalised-text)
+$normalised-text-values: (
+  $base-font-family,
+  $base-font-size,
+  $base-line-height
+);
+
+// Font Weights
+$f-light: 300;
+$f-regular: 400;
+$f-medium: 500;
+$f-semibold: 600;
+$f-bold: 700;
+$f-heavy: 800;
+
+// -----------------------------------------------------------------------------
+// LAYOUT
+// -----------------------------------------------------------------------------
+
+// Content Widths
+$cw-ultrawide: 1920px;
+$cw-desktop: 1370px;
+$cw-mobile: 335px;
+
+// Gutters
+$g-desktop: 5vw;
+$g-tablet: 5vw;
+$g-mobile: 5vw;
+
+// Z-indexes
+$z-index-top: 999;
+$z-index-modal: 200;
+$z-index-header-nav: 99;
+$z-index-page-loading-spinner: 95;
+$z-index-secondary-nav: 90;
+
+// -----------------------------------------------------------------------------
+// Animation Transition
+// -----------------------------------------------------------------------------
+$a-short: 0.3s;
+$a-medium: 0.5s;
+$a-long: 1s;

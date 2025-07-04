@@ -1,0 +1,98 @@
+@import "~styles/config";
+
+.single-blog-post {
+  position: relative;
+  padding: 72px 0;
+
+  &__wrap {
+    max-width: 839px;
+    margin: 0 auto;
+
+    figure {
+      margin-bottom: 20px;
+    }
+
+    figcaption {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 12px;
+
+      &:only-child {
+        margin-bottom: 0;
+      }
+    }
+
+    hr {
+      border-color: $green;
+      margin: 32px 0;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 20px;
+
+      strong {
+        font-size: 18px;
+        font-weight: $f-medium;
+        line-height: 26px;
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding: 0 0 25px 24px;
+
+      li {
+        margin-bottom: 4px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    ol {
+      margin: 0;
+      padding: 2px 0 15px;
+      list-style-type: none;
+      counter-reset: ordered;
+
+      li {
+        position: relative;
+        margin-bottom: 4px;
+        padding-left: 24px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &::before {
+          content: counter(ordered) ".";
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: inline-block;
+          counter-increment: ordered;
+          font-size: 16px;
+          font-weight: $f-bold;
+          line-height: 24px;
+          color: $green;
+        }
+      }
+    }
+
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+  }
+}

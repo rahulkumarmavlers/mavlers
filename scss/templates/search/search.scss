@@ -1,0 +1,107 @@
+@import "~styles/config";
+@import "./filters/checkboxes";
+
+.site-search-hero {
+  padding: 170px 0 83px;
+  background-color: #085540;
+  background-image: url("~img/crop-dark-green-bg.png");
+  background-repeat: no-repeat;
+  background-position: 110% 42%;
+  background-size: 60%;
+
+  h1 { color: #fff; }
+
+  @include r(laptop, tablet) {
+    background-position: 170% 42%;
+    background-size: 90%;
+  }
+
+  @include r(tablet-small) {
+    background-position: 0% 42%;
+    background-size: 120%;
+  }
+
+  @include r(mobile) {
+    background-position: -140px 38%;
+    background-size: 170%;
+  }
+}
+
+.site-search-content {
+  padding: 48px 0 96px;
+
+  .flex-grid {
+    display: flex;
+    gap: 132px;
+
+    > div {
+      &:first-child { flex: 0 0 407px; }
+
+      &:last-child { flex-grow: 1; }
+    }
+
+    @include r(laptop) {
+      gap: 80px;
+
+      > div {
+        &:first-child { flex-basis: 340px; }
+      }
+    }
+
+    @include r(tablet, mobile) {
+      gap: 40px;
+      flex-wrap: wrap;
+
+      > div {
+        &:first-child,
+        &:last-child { flex-basis: 100%; }
+      }
+    }
+  }
+
+  //
+  // Search form
+  //
+  .form-style {
+    .search-form {
+      // We just want to show filter elements, nothing else
+      .search-form__input-field,
+      .search-submit-btn { display: none; }
+    }
+  }
+
+  //
+  // Search results
+  //
+  .site-search__results {
+    padding-top: 28px;
+
+    .search-result-item {
+      border-bottom: 1px solid $green;
+      margin-top: 45px;
+      padding-bottom: 47px;
+
+      &:first-child { margin-top: 0; }
+
+      &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      h4 { margin-bottom: 16px; }
+
+      .btn { margin-top: 22px; }
+
+      @include r(tablet, mobile) {
+        margin-top: 40px;
+        padding-bottom: 35px;
+      }
+    }
+  }
+
+  //.site-search__pagination {}
+
+  .site-search__no-results {
+    h2 { font-size: 30px; }
+  }
+}

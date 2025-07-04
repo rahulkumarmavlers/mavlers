@@ -1,0 +1,103 @@
+@import "~styles/config";
+
+.careers-header {
+  padding: 196px 0 130px;
+  background-color: #fdfdfd;
+  background-image: url("~img/careers-header-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: cover;
+
+  @include r(tablet-small) {
+    padding: 80px 0 0;
+    background-image: url("~img/careers-header-bg-mobile.png");
+  }
+
+  &__title {
+    margin: 25px 0;
+
+    @include r(tablet-small) {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  }
+}
+
+.careers-subheader {
+  position: relative;
+  z-index: 1;
+  transform: translateY(-50%);
+
+  @include r(tablet-small) {
+    margin-bottom: 64px;
+    padding-top: 48px;
+    transform: none;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(calc(100% / 4), 1fr));
+    padding: 42px 65px;
+    background-color: $green--dark;
+    gap: 64px;
+
+    @include r(tablet-small) {
+      grid-template-columns: 1fr;
+      gap: 24px;
+      padding: 24px;
+    }
+  }
+
+  &__taxonomy {
+    text-align: center;
+
+    @include r(tablet-small) {
+      text-align: left;
+    }
+  }
+
+  &__taxonomy-header {
+    margin: 0 0 5px;
+    font-family: $orkney;
+    color: $white;
+
+    @include r(tablet-small) {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+
+  &__term {
+    margin: 0;
+    font-size: 18px;
+    font-weight: $f-medium;
+    line-height: 26px;
+    color: $white;
+
+    @include r(tablet-small) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}
+
+.careers-content {
+  position: relative;
+  z-index: 5;
+
+  @include r(mobile, tablet) {
+    padding-bottom: 50px;
+  }
+
+  .wysiwyg {
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      margin: 0 0 20px;
+      font-family: $orkney;
+    }
+  }
+}

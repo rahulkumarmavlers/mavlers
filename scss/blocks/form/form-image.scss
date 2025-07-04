@@ -1,0 +1,128 @@
+@import "~styles/config";
+@import "~styles/components/form";
+
+.form-image-block {
+  position: relative;
+  padding: 80px 0;
+
+  &--form-no-image {
+    .container {
+      display: block !important;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+  }
+
+  &--top-white-bottom-grey {
+    background-color: $grey--light;
+
+    &::before {
+      background-color: $white;
+    }
+  }
+
+  &--top-grey-bottom-white {
+    background-color: $white;
+
+    &::before {
+      background-color: $grey--light;
+    }
+  }
+
+  &--grey {
+    background-color: $grey--light;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 512px;
+
+    @include r(tablet, mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__image {
+    position: relative;
+    display: block;
+    height: 100%;
+    min-height: 400px;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__image-col {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__curve {
+    position: absolute;
+    z-index: 2;
+
+    &--desktop {
+      top: 0;
+      bottom: 0;
+      right: -1px;
+      width: auto;
+      height: 100%;
+
+      @include r(mobile, tablet) {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      bottom: -1px;
+      left: 0;
+      right: 0;
+      display: none;
+      width: 100%;
+      height: auto;
+
+      @include r(mobile, tablet) {
+        display: block;
+      }
+    }
+  }
+
+  &__form {
+    padding: 40px 48px 48px;
+    background-color: $green--dark;
+    box-shadow: 0 0 48px 0 rgba($black, 0.1);
+
+    @include r(mobile) {
+      padding: 24px;
+    }
+
+    &-title {
+      margin: 0 0 20px !important;
+      color: $white;
+
+      @include r(mobile) {
+        margin-bottom: 20px;
+        font-size: 22px;
+        line-height: 30px;
+      }
+    }
+  }
+}

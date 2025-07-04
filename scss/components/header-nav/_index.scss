@@ -1,0 +1,281 @@
+// -----------------------------------------------------------------------------
+// HEADER NAV
+//
+// **PLEASE NOTE**
+//
+// The design for this block is made of convenient rules to accommodate a
+// specific menu structure. It is not very flexible and the mobile version
+// even has logic conflicts in how it's presented, which makes the use of
+// hacks necessary.
+//
+// There are 2 types of menus, "Mega" and "Simple". Mega contains up to 3 levels
+// nested menus while "Simple" only has 1. The implementation has hard-coded
+// values in css to target specific sub menu items and the .js component for the
+// sidebar has hacks to allow a better UX in the navigation.
+//
+// Because of this, if a "Simple" menu ever needs to have more than 1 level of
+// sub menus, it will require tweaking this component as well as new designs.
+//
+// -----------------------------------------------------------------------------
+
+@import "featured-post";
+@import "header-nav-full";
+@import "header-nav-mobile";
+
+.header-nav {
+  @include admin-bar;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: $z-index-header-nav;
+  width: 100%;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  // Base styles for all menu items
+  .nav-menu-item {
+    > a {
+      position: relative;
+      display: block;
+      font-size: 16px;
+      font-weight: $f-regular;
+      line-height: 24px;
+      text-decoration: none;
+    }
+
+    &--view-more {
+      a {
+        font-family: $kamerik;
+        font-size: 12px;
+        font-weight: $f-bold;
+        line-height: 24px;
+        text-decoration: underline;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  // Menu item style variation
+  .nav-menu-item--header-link {
+    flex-basis: 0;
+    flex-grow: 1;
+
+    > span,
+    > a {
+      font-size: 12px;
+      font-weight: $f-bold;
+      letter-spacing: 2px;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+
+    > span {
+      cursor: default;
+    }
+  }
+
+  //
+  // Overlay
+  //
+  // [1] a value bigger than 100vh is required when hiding the menu on scrolling down (Headroom.js)
+  //
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 150vh; // [1]
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 400ms,
+      visibility 400ms;
+  }
+
+  //
+  // Colour variation :: Transparent
+  //
+  &.header-nav--transparent {
+    // Base styles for all menu items
+    .nav-menu-item {
+      > a {
+        color: $black;
+
+        @include hover {
+          color: $black;
+        }
+      }
+
+      &--view-more {
+        a {
+          color: $black;
+
+          @include hover {
+            color: $green--dark;
+          }
+        }
+      }
+    }
+
+    .nav-menu-item--header-link {
+      > span,
+      > a {
+        color: $green--dark;
+      }
+    }
+
+    // Overlay
+    &::before {
+      background-color: rgba($black, 0.8);
+    }
+  }
+
+  //
+  // Colour variation :: Transparent Dark Text
+  //
+  // &.header-nav--transparent-dark {
+  //   // Base styles for all menu items
+  //   .nav-menu-item {
+  //     > a {
+  //       color: $black;
+
+  //       @include hover {
+  //         color: $white;
+  //       }
+  //     }
+
+  //     &--view-more {
+  //       a {
+  //         color: $white;
+
+  //         @include hover {
+  //           color: $white;
+  //         }
+  //       }
+  //     }
+  //   }
+
+  //   .nav-menu-item--header-link {
+  //     > span,
+  //     > a {
+  //       color: $white;
+  //     }
+  //   }
+
+  //   // Overlay
+  //   &::before {
+  //     background-color: rgba($black, 0.8);
+  //   }
+  // }
+
+  //
+  // Colour variation :: Green
+  //
+  &.header-nav--green {
+    // Base styles for all menu items
+    .nav-menu-item {
+      > a {
+        color: $black;
+
+        @include hover {
+          color: $black;
+        }
+      }
+
+      &--view-more {
+        a {
+          color: $black;
+
+          @include hover {
+            color: $green--dark;
+          }
+        }
+      }
+    }
+
+    .nav-menu-item--header-link {
+      > span,
+      > a {
+        color: $green--dark;
+      }
+    }
+
+    // Overlay
+    &::before {
+      background-color: rgba($black, 0.8);
+    }
+  }
+
+  //
+  // Colour variation :: White
+  //
+  &.header-nav--white,
+  &.headroom--not-top,
+  &.header-nav--transparent-dark {
+    // Base styles for all menu items
+    .nav-menu-item {
+      > a {
+        color: $white;
+
+        @include hover {
+          color: $white;
+        }
+      }
+
+      &--view-more {
+        a {
+          color: $white;
+
+          @include hover {
+            color: $white;
+          }
+        }
+      }
+    }
+
+    .nav-menu-item--header-link {
+      > span,
+      > a {
+        color: $white;
+      }
+    }
+
+    // Overlay
+    &::before {
+      background-color: rgba($black, 0.8);
+    }
+  }
+
+  &.show-overlay {
+    transform: translateY(0%);
+
+    &::before {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+//
+// Headroom.js animation configuration
+//
+.headroom {
+  will-change: transform;
+  transition: transform 200ms linear;
+}
+
+.headroom--pinned {
+  transform: translateY(0%);
+}
+
+.headroom--unpinned {
+  transform: translateY(-100%);
+}

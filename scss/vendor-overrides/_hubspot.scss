@@ -1,0 +1,223 @@
+// -----------------------------------------------------------------------------
+// HUBSPOT FORM STYLES OVERRIDES
+// -----------------------------------------------------------------------------
+
+.form-style {
+  .hbspt-form {
+    // Overrides max width restriction on columns
+    fieldset {
+      max-width: 100%;
+    }
+
+    .form-columns-2 {
+      display: flex;
+      gap: 15px;
+
+      @include r(mobile) {
+        flex-direction: column;
+        gap: 0;
+
+        .hs-form-field {
+          width: 100%;
+        }
+      }
+    }
+
+    // Resets <ul> styles
+    .inputs-list {
+      position: relative;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      line-height: 1;
+
+      li {
+        padding: 0;
+        line-height: 1;
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    .hs-richtext {
+      p {
+        font-size: 14px;
+
+        @include r(mobile) {
+          font-size: 11px;
+          line-height: 14px;
+        }
+      }
+    }
+
+    // Checkboxes & radio buttons
+    .hs-form-radio,
+    .hs-form-booleancheckbox,
+    .hs-form-checkbox {
+      display: inline-block;
+      margin-bottom: 10px;
+      margin-right: 20px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .hs-form-booleancheckbox,
+    .hs-form-checkbox {
+      @include checkbox-field-custom-style-hubspot;
+    }
+
+    .hs-form-radio {
+      @include radio-field-custom-style-hubspot;
+    }
+
+    //
+    // Validation feedback
+    //
+    .hs-form-field {
+      input[type="date"],
+      input[type="password"],
+      input[type="text"],
+      input[type="url"],
+      input[type="number"],
+      input[type="email"],
+      input[type="tel"],
+      textarea {
+        &.error {
+          border-color: $red;
+        }
+      }
+
+      textarea {
+        width: 100% !important;
+      }
+    }
+
+    .hs-error-msgs {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        margin-bottom: 0;
+      }
+
+      li + li {
+        margin-top: 7px;
+      }
+
+      .hs-error-msg,
+      label {
+        display: flex;
+        font-size: 16px;
+        font-weight: $f-regular;
+        font-style: normal;
+        line-height: 24px;
+        color: $red !important; // overrides inline styles
+
+        @include r(mobile) {
+          font-size: 11px;
+          line-height: 14px;
+        }
+      }
+    }
+
+    // Error message near submit button
+    .hs_error_rollup {
+      margin-bottom: 20px;
+      padding: 10px 20px 7px;
+      background-color: $red-fade;
+
+      .hs-error-msgs {
+        li {
+          text-align: center;
+        }
+      }
+    }
+
+    .hs_recaptcha {
+      margin-top: 40px;
+    }
+
+    // Removes margin added in Hubspot inline style
+    .legal-consent-container .hs-form-booleancheckbox-display > span {
+      margin-left: 0;
+    }
+  }
+
+  //
+  // Size variation :: small
+  //
+  &--dark {
+    .hbspt-form {
+      .hs-richtext {
+        p {
+          color: $white;
+        }
+      }
+
+      .hs-form-booleancheckbox,
+      .hs-form-checkbox {
+        label {
+          input:checked + span {
+            &::before {
+              border-color: $white;
+              background-color: $white;
+            }
+          }
+
+          > span {
+            color: $white;
+
+            &::before {
+              border-color: $white;
+            }
+
+            &::after {
+              background-image: url("~img/checked-dark.svg");
+            }
+
+            p {
+              color: $white;
+            }
+
+            a {
+              color: $white;
+            }
+          }
+        }
+      }
+
+      // Radio buttons
+      .hs-fieldtype-radio > label {
+        margin-bottom: 15px;
+      }
+
+      .hs-form-radio {
+        label {
+          margin-bottom: 5px;
+        }
+
+        label > span {
+          padding-left: 25px;
+          font-size: 15px;
+
+          &::before {
+            top: -1px;
+            width: 17px;
+            height: 17px;
+          }
+
+          &::after {
+            left: 5px;
+            width: 7px;
+            height: 7px;
+          }
+        }
+      }
+    }
+  }
+}

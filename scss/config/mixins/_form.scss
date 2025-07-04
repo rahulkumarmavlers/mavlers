@@ -1,0 +1,463 @@
+//
+// Checkbox
+//
+@mixin checkbox-field-custom-style() {
+  input {
+    display: none;
+  }
+
+  label {
+    position: relative;
+    display: block;
+    padding-left: 26px;
+    font-size: 14px;
+    font-weight: $f-medium;
+    line-height: 20px;
+    color: $black--off;
+    cursor: pointer;
+    user-select: none;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 1px;
+      left: 0;
+      width: 16px;
+      height: 16px;
+    }
+
+    &::before {
+      content: "";
+      border: 1px solid $green;
+    }
+
+    &::after {
+      background-image: url("~img/checked.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 8px;
+    }
+  }
+
+  // Shows 'checked' state
+  input:checked + label::after {
+    content: "";
+  }
+
+  input:checked + label::before {
+    background-color: $green;
+  }
+}
+
+//
+// Checkbox for Hubspot forms (different markup)
+//
+@mixin checkbox-field-custom-style-hubspot() {
+  label {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+
+    input {
+      @include visually-hidden-input-field;
+
+      // "Focus"
+      &:focus + span::before {
+        border-color: $green;
+      }
+    }
+
+    > span {
+      position: relative;
+      display: block;
+      padding-left: 33px;
+      font-size: 16px;
+      font-weight: $f-regular;
+      line-height: 20px;
+      color: $black--off;
+      cursor: pointer;
+      user-select: none;
+
+      @include r(mobile) {
+        padding-left: 24px;
+      }
+
+      p {
+        font-size: 16px;
+        font-weight: $f-regular;
+        line-height: 20px;
+
+        @include r(mobile) {
+          font-size: 11px;
+          line-height: 14px;
+        }
+      }
+
+      &::before,
+      &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 21px;
+        height: 21px;
+
+        @include r(mobile) {
+          width: 16px;
+          height: 16px;
+        }
+      }
+
+      &::before {
+        content: "";
+        border: 1px solid $green;
+        border-radius: 0;
+      }
+
+      &::after {
+        background-image: url("~img/checked.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 13px;
+
+        @include r(mobile) {
+          background-size: 8px;
+        }
+      }
+    }
+
+    // Shows 'checked' state
+    input:checked {
+      + span::after {
+        content: "";
+      }
+
+      + span::before {
+        border-color: $green;
+        background-color: $green;
+      }
+    }
+  }
+}
+
+//
+// Radio button
+//
+@mixin radio-field-custom-style() {
+  input {
+    display: none;
+  }
+
+  label {
+    position: relative;
+    display: block;
+    padding-left: 26px;
+    font-size: 14px;
+    font-weight: $f-medium;
+    line-height: 20px;
+    color: $black--off;
+    cursor: pointer;
+    user-select: none;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 17px;
+      height: 17px;
+      border-radius: 100%;
+    }
+
+    &::before {
+      content: "";
+      border: 1px solid $green;
+    }
+
+    &::after {
+      top: 4px;
+      left: 4px;
+      width: 9px;
+      height: 9px;
+      background-color: $green;
+    }
+  }
+
+  // Shows 'checked' state
+  input:checked + label::after {
+    content: "";
+  }
+}
+
+//
+// Radio field for Hubspot forms (different markup)
+//
+@mixin radio-field-custom-style-hubspot() {
+  label {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+
+    input {
+      @include visually-hidden-input-field;
+
+      // "Focus"
+      &:focus + span::before {
+        border-color: $green;
+      }
+    }
+
+    > span {
+      position: relative;
+      display: block;
+      padding-left: 38px;
+      font-size: 16px;
+      font-weight: $f-regular;
+      line-height: 20px;
+      color: $black--off;
+      cursor: pointer;
+      user-select: none;
+
+      &::before,
+      &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+      }
+
+      &::before {
+        content: "";
+        border: 1px solid $green;
+        border-radius: 50%;
+      }
+
+      &::after {
+        top: 4px;
+        left: 6px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #fff;
+      }
+    }
+
+    // Shows 'checked' state
+    input:checked {
+      + span::after {
+        content: "";
+      }
+
+      + span::before {
+        background-color: $green;
+      }
+    }
+  }
+}
+
+//
+// Styles <select> field appearance.
+// Dropdown is styled by the browser defaults.
+//
+@mixin select-field-custom-style() {
+  border: 1px solid red;
+  border-radius: 0;
+  outline: none;
+  padding: 14px 35px 10px 14px;
+  font-size: 16px;
+  font-weight: $f-medium;
+  line-height: 20px;
+  color: $black;
+  background-color: $grey--light;
+  background-image: url("~img/select-down-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center right 12px;
+  background-size: 11px;
+  box-shadow: none;
+  cursor: pointer;
+  appearance: none;
+}
+
+//
+// Text placeholder styling for <input> fields
+//
+@mixin placeholder-style() {
+  @include multiple-selectors(
+    "&::-webkit-input-placeholder",
+    "&:-moz-placeholder",
+    "&::-moz-placeholder",
+    "&:-ms-input-placeholder"
+  ) {
+    @content;
+  }
+}
+
+//
+// Gravity forms datepicker
+// Apply this mixin to .ui-datepicker
+//
+@mixin datepicker-style() {
+  width: 100%;
+  max-width: 292px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background: #fff;
+
+  @include r(mobile) {
+    max-width: 275px;
+  }
+
+  .ui-datepicker-calendar {
+    width: 100%;
+
+    a {
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    th { font-weight: $f-medium; }
+
+    td {
+      a {
+        text-decoration: none;
+        color: $black--off;
+
+        &:hover { text-decoration: underline; }
+      }
+
+      //&.ui-datepicker-today {
+      //  a { font-style: italic; }
+      //}
+
+      &.ui-datepicker-current-day {
+        a {
+          font-weight: $f-medium;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .ui-state-default {
+    padding-left: 9px;
+  }
+
+  .ui-state-disabled {
+    color: rgba(#000, 0.5);
+  }
+
+  .ui-datepicker-header {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .ui-datepicker-prev,
+  .ui-datepicker-next {
+    padding-left: 6px;
+    padding-right: 6px;
+    font-weight: $f-medium;
+    color: $black--off;
+    cursor: pointer;
+
+    &:hover { text-decoration: underline; }
+  }
+
+  .ui-datepicker-title {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    select {
+      @include select-field-custom-style;
+
+      width: 48%;
+      padding: 10px 35px 9px 14px;
+      line-height: 1;
+      cursor: pointer;
+    }
+  }
+}
+
+//
+// File upload field
+//
+@mixin file-upload-field-custom-style {
+  input[type="file"] {
+    position: relative;
+    height: 42px;
+    padding: 10px 15px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+    text-transform: capitalize;
+    color: $black;
+    background-color: #f3f3f6;
+    cursor: pointer;
+
+    span,
+    &::placeholder {
+      float: left;
+    }
+
+    &::-webkit-file-upload-button,
+    &::file-selector-button {
+      border: 0;
+      margin: 0;
+      padding: 0 20px 0 0;
+      font-size: 16px;
+      line-height: 20px;
+
+      //float: right; // hides the button, but leaves a gap in Safari
+      text-align: left;
+      text-decoration: underline;
+      color: $black;
+      background: none;
+      cursor: pointer;
+      appearance: none;
+    }
+  }
+}
+
+@mixin multi-file-upload-field-custom-style {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 42px;
+  padding: 10px 15px;
+  text-align: left;
+  color: $black;
+  background-color: grey;
+
+  button {
+    @include btn-reset;
+
+    margin-right: 5px;
+    font-family: $orkney;
+    font-size: 14px;
+    text-decoration: underline;
+    color: $grey;
+    transition: color $a-short;
+    cursor: pointer;
+
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
+//
+// Hides input field (for custom styling) without affecting accessibility and
+// HTML5 form validation.
+// This is an alternative to display="none";
+//
+@mixin visually-hidden-input-field {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(1px, 1px, 1px, 1px);
+}

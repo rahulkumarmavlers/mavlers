@@ -1,0 +1,242 @@
+@import "~styles/config";
+
+.testimonial-block {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  padding: 115px 0 120px;
+
+  @include r(laptop-small) {
+    padding: 100px 0;
+  }
+
+  @include r(tablet-small) {
+    padding: 70px 0;
+  }
+
+  @include r(tablet-small) {
+    padding: 72px 0 48px;
+  }
+
+  &__heading {
+    margin-bottom: 64px;
+    text-align: center;
+
+    @include r(laptop-small) {
+      margin-bottom: 50px;
+    }
+
+    @include r(tablet-max) {
+      margin-bottom: 45px;
+    }
+
+    @include r(tablet-small) {
+      margin-bottom: 36px;
+    }
+
+    p {
+      margin-bottom: 5px;
+
+      span {
+        display: block;
+        font-size: 14px;
+        letter-spacing: 3.5px;
+        text-transform: uppercase;
+
+        @include r(laptop-small) {
+          font-size: 13px;
+        }
+
+        @include r(tablet-small) {
+          font-size: 12px;
+        }
+      }
+    }
+
+    h2 {
+      margin-top: 0;
+      color: $green;
+
+      &.dark-green-title {
+        color: $green--dark;
+      }
+    }
+  }
+
+  &__slidercolumn {
+    width: 66%;
+    margin-right: 96px;
+
+    @include r(laptop-small) {
+      margin-right: 80px;
+    }
+
+    @include r(tablet-max) {
+      margin-right: 50px;
+    }
+
+    @include r(tablet-small) {
+      width: 83%;
+      margin-right: 16px;
+      opacity: 0.5;
+      transition: opacity $a-short ease-in-out;
+    }
+
+    &.is-selected {
+      opacity: 1;
+    }
+  }
+
+  &__slider {
+    &.flickity-enabled {
+      .flickity-page-dots {
+        width: 100%;
+        height: 10px;
+        overflow: hidden;
+
+        @include r(tablet-small) {
+          display: none;
+          justify-content: flex-start;
+          height: 0;
+          opacity: 0;
+          visibility: hidden;
+        }
+
+        .dot,
+        .flickity-page-dot {
+          margin: 2px 4px;
+        }
+      }
+    }
+  }
+
+  .flickity-viewport {
+    overflow: inherit;
+  }
+
+  &__slidercol {
+    height: 100%;
+    border: 1px solid $grey;
+    padding: 40px 50px 40px 107px;
+    background: $grey--light;
+
+    @include r(tablet-max) {
+      padding: 35px 40px 35px 80px;
+    }
+
+    @include r(tablet-small) {
+      padding: 23px 20px 18px;
+    }
+
+    blockquote {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      height: 100%;
+      margin: 0;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 7px;
+        left: -61px;
+        width: 36px;
+        height: 30px;
+        background: url("~img/quote-icon.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 36px;
+
+        @include r(tablet-max) {
+          top: 5px;
+          left: -50px;
+          width: 32px;
+          height: 26px;
+          background-size: 32px;
+        }
+
+        @include r(tablet-small) {
+          position: static;
+          display: block;
+          width: 24px;
+          height: 20px;
+          margin-bottom: 13px;
+          background-size: 24px;
+        }
+      }
+
+      & > p {
+        font-size: 20px;
+        line-height: 28px;
+
+        @include r(laptop-small) {
+          font-size: 18px;
+          line-height: 26px;
+        }
+
+        @include r(tablet-max) {
+          font-size: 16px;
+          line-height: 22px;
+        }
+
+        @include r(tablet-small) {
+          font-size: 14px;
+          line-height: 20px;
+        }
+
+        a {
+          text-decoration: underline;
+          color: $green--dark;
+          transition: color $a-short;
+
+          &:hover {
+            color: $green;
+          }
+        }
+      }
+
+      h6 {
+        margin-bottom: 3px;
+        font-family: $orkney;
+        font-weight: $f-medium;
+        color: $green--dark;
+
+        @include r(tablet-small) {
+          margin-bottom: 2px;
+        }
+      }
+    }
+  }
+
+  &__author {
+    margin-top: auto;
+    padding-top: 16px;
+
+    // @include r(tablet-small) {
+    //   padding-top: 20px;
+    // }
+
+    p {
+      margin: 0;
+      font-size: 14px;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+
+      @include r(laptop-small) {
+        letter-spacing: 3px;
+      }
+
+      @include r(tablet-max) {
+        font-size: 13px;
+        letter-spacing: 2px;
+      }
+
+      @include r(mobile) {
+        font-size: 10px;
+        line-height: 16px;
+      }
+    }
+  }
+}

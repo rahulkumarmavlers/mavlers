@@ -1,0 +1,137 @@
+//
+// Container classes, responsive rules set from wider to smaller screens
+//
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  &,
+  &--default {
+    $content-width: 1270px;
+    $gutter: calc-gutter(1270px, 1366px);
+
+    max-width: calc(#{$content-width} + (2 * #{$gutter}));
+    padding-left: $gutter;
+    padding-right: $gutter;
+  }
+
+  &--1920 {
+    $content-width: 1368;
+    $gutter: calc-gutter(1368, 2560px);
+
+    max-width: calc(#{$content-width} + (2 * #{$gutter}));
+    padding-left: $gutter;
+    padding-right: $gutter;
+  }
+
+  &--1440 {
+    $content-width: 1440px;
+    $gutter: calc-gutter(1440px, 1368px);
+
+    max-width: calc(#{$content-width} + (2 * #{$gutter}));
+    padding-left: $gutter;
+    padding-right: $gutter;
+  }
+
+  &--1100 {
+    $content-width: 1100px;
+    $gutter: calc-gutter(1100px, 1368px);
+
+    max-width: calc(#{$content-width} + (2 * #{$gutter}));
+    padding-left: $gutter;
+    padding-right: $gutter;
+  }
+
+  &--1054 {
+    $content-width: 1054px;
+    $gutter: calc-gutter(1054px, 1368px);
+
+    max-width: calc(#{$content-width} + (2 * #{$gutter}));
+    padding-left: $gutter;
+    padding-right: $gutter;
+  }
+
+  &--1024 {
+    $content-width: 1024px;
+    $gutter: calc-gutter(1024px, 1368px);
+
+    max-width: calc(#{$content-width} + (2 * #{$gutter}));
+    padding-left: $gutter;
+    padding-right: $gutter;
+  }
+
+  &--838 {
+    $content-width: 838px;
+    $gutter: calc-gutter(838px, 1368px);
+
+    max-width: calc(#{$content-width} + (2 * #{$gutter}));
+    padding-left: $gutter;
+    padding-right: $gutter;
+  }
+
+  &--768 {
+    $content-width: 768px;
+    $gutter: calc-gutter(768px, 1368px);
+
+    max-width: calc(#{$content-width} + (2 * #{$gutter}));
+    padding-left: $gutter;
+    padding-right: $gutter;
+  }
+
+  &--320 {
+    $content-width: 320px;
+    $gutter: calc-gutter(320px, 1368px);
+
+    max-width: calc(#{$content-width} + (2 * #{$gutter}));
+    padding-left: $gutter;
+    padding-right: $gutter;
+  }
+
+  @include r(laptop) {
+    max-width: initial;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @include r(tablet) {
+    max-width: initial;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  @include r(mobile) {
+    max-width: initial;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  //
+  // Container used only for default Gutenberg blocks (text, heading, images...)
+  // rendered via the_content_with_block_containers().
+  //
+  // Please do not re-use it on other places.
+  //
+  //&--wysiwyg {}
+
+  //
+  // Container used only for default Gutenberg Columns block
+  // rendered via the_content_with_block_containers().
+  //
+  // Please do not re-use it on other places.
+  //
+  &--wp-columns {
+    margin: 0 auto;
+
+    .wp-block-columns {
+      margin: 0;
+    }
+  }
+
+  // Child containers have their padding flushed to the sides, making them constrained
+  // by the parent container (i.e. container block)
+  .container & {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

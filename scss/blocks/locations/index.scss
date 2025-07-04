@@ -1,0 +1,259 @@
+@import "~styles/config";
+
+.locations-block {
+  position: relative;
+  z-index: 1;
+  padding: 120px 0;
+
+  @include r(laptop-small) {
+    padding: 100px 0;
+  }
+
+  @include r(tablet-max) {
+    padding: 70px 0;
+  }
+
+  @include r(tablet-small) {
+    padding: 70px 0 80px;
+  }
+
+  &__heading {
+    p {
+      @include r(tablet-small) {
+        margin-bottom: 9px;
+      }
+
+      span {
+        display: block;
+        font-size: 18px;
+        font-weight: $f-medium;
+        letter-spacing: 4.5px;
+        line-height: 1.2;
+        text-transform: uppercase;
+
+        @include r(laptop-small) {
+          font-size: 13px;
+        }
+
+        @include r(tablet-small) {
+          font-size: 12px;
+          letter-spacing: 3px;
+        }
+      }
+    }
+
+    h2 {
+      margin-top: 0;
+      color: $green;
+
+      &.dark-green-title {
+        color: $green--dark;
+      }
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 34px -12px 0;
+
+    @include r(tablet-small) {
+      margin: 39px -12px 0;
+    }
+  }
+
+  &__title {
+    position: relative;
+
+    @include r(tablet-small) {
+      padding: 17px 18px 12px;
+      cursor: pointer;
+    }
+
+    &::after {
+      @include r(tablet-small) {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 18px;
+        width: 14px;
+        height: 14px;
+        margin: auto;
+        background-image: url("~img/plus-icon.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 14px;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    display: block;
+
+    @include r(tablet-small) {
+      max-height: 0;
+      padding: 0 18px;
+      opacity: 0;
+      transition: max-height $a-short ease-in-out, padding $a-short ease-in-out;
+      will-change: max-height;
+    }
+  }
+
+  &__column {
+    width: 33.33%;
+    margin-top: 24px;
+    padding: 0 12px;
+
+    @include r(tablet-max) {
+      width: 50%;
+    }
+
+    @include r(tablet-small) {
+      width: 100%;
+      margin: 0 0 16px;
+    }
+
+    &:last-child {
+      @include r(tablet-small) {
+        margin-bottom: 0;
+      }
+    }
+
+    &.active {
+      .locations-block__title {
+        &::after {
+          @include r(tablet-small) {
+            opacity: 0;
+          }
+        }
+      }
+
+      .locations-block__content {
+        padding-bottom: 18px;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__inner {
+    position: relative;
+    height: 100%;
+    padding: 20px 22px;
+    background: $grey--light;
+    transition: all $a-short ease-in-out;
+
+    @include r(tablet-small) {
+      padding: 0;
+    }
+
+    h5 {
+      margin: 0 0 16px;
+      font-family: $orkney;
+
+      @include r(tablet-small) {
+        margin: 0;
+      }
+
+      a {
+        display: inline-block;
+        vertical-align: middle;
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin-bottom: 9px;
+        list-style: none;
+
+        @include r(tablet-small) {
+          margin-bottom: 6px;
+        }
+
+        a,
+        span {
+          position: relative;
+          display: inline-block;
+          vertical-align: middle;
+          padding-left: 28px;
+          text-decoration: none;
+          color: inherit;
+
+          @include r(tablet-small) {
+            padding-left: 24px;
+          }
+        }
+
+        img {
+          position: absolute;
+          top: 4px;
+          bottom: 0;
+          left: 0;
+          display: inline-block;
+          vertical-align: middle;
+          max-width: 16px;
+
+          @include r(tablet-small) {
+            max-width: 14px;
+          }
+        }
+      }
+    }
+
+    &:hover {
+      color: $white;
+
+      @include r(tablet-small) {
+        color: $black--off;
+      }
+
+      .locations-block__hoverbg {
+        img {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .link-primary {
+        color: $white;
+
+        @include r(tablet-small) {
+          color: $black--off;
+        }
+      }
+    }
+  }
+
+  &__hoverbg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    @include r(tablet-small) {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transform: scale(1.3);
+      transition: all $a-short ease-in-out;
+      object-fit: cover;
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}

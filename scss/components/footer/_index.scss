@@ -1,0 +1,157 @@
+.site-footer {
+  position: relative;
+  padding: 65px 0 80px;
+  background-color: $green--dark;
+  background-image: url("~img/footer-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include r(mobile, tablet) {
+    padding: 30px 0 40px;
+  }
+
+  .container {
+    display: grid;
+    column-gap: 35px;
+    grid-template-columns: 32% 1fr;
+
+    @include r(mobile, tablet) {
+      grid-template-columns: 1fr;
+      row-gap: 45px;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 28px;
+    padding: 0;
+    list-style-type: none;
+    gap: 15px;
+
+    @include r(mobile, tablet) {
+      margin: 0 0 48px;
+    }
+
+    li {
+      width: 39px;
+      height: 39px;
+
+      a {
+        display: block;
+      }
+    }
+  }
+
+  &__col {
+    &--small {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-right: 1px solid $green;
+      padding-right: 15px;
+
+      @include r(mobile, tablet) {
+        display: block;
+        border-bottom: 1px solid $green;
+        border-right: 0;
+        padding-right: 0;
+      }
+    }
+
+    &--large {
+      padding-right: 50px;
+
+      @include r(mobile, tablet) {
+        border-bottom: 1px solid $green;
+        padding-bottom: 45px;
+        padding-right: 0;
+      }
+    }
+  }
+
+  &__logo {
+    max-width: 253px;
+    margin-top: -20px;
+
+    @include r(mobile, tablet) {
+      max-width: 171px;
+      margin-top: 0;
+      margin-bottom: 48px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__copyright {
+    margin: 0;
+    font-size: 14px;
+    line-height: 22px;
+    color: $white;
+
+    a {
+      text-decoration: none;
+      color: $white;
+      pointer-events: none;
+    }
+
+    &--desktop {
+      @include r(mobile, tablet) {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      font-size: 12px;
+      line-height: 22px;
+
+      @include r(ultrawide, desktop, laptop) {
+        display: none;
+      }
+    }
+  }
+}
+
+.site-footer-menu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  > .menu-item {
+    > a {
+      font-size: 20px;
+      font-weight: $f-heavy;
+      line-height: 28px;
+      text-decoration: none;
+      color: $white;
+    }
+
+    &:last-child {
+      .sub-menu {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .sub-menu {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0 40px;
+    padding: 0;
+    list-style-type: none;
+    gap: 10px 30px;
+
+    .menu-item {
+      a {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-decoration: none;
+        color: $white;
+      }
+    }
+  }
+}

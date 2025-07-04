@@ -1,0 +1,239 @@
+//
+// [1] - adjusting background image position with percentages is tricky and weird due to how the browser calculates it
+//       Read more:
+//       https://stackoverflow.com/questions/29674505/background-position-negative-percentage-values#answer-29676455
+//
+.search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $z-index-top;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #085540;
+  background-image: url("~img/crop-dark-green-bg.png");
+  background-repeat: no-repeat;
+  background-position: -6% center; // [1]
+  background-size: 85%; // this needs to be adjusted along with the form's width so they can match
+
+  @include r(laptop-small) {
+    background-position: 150% center; // [1]
+    background-size: 110%; // [1]
+  }
+
+  @include r(tablet) {
+    background-position: 80% center; // [1]
+    background-size: 150%; // [1]
+  }
+
+  @include r(mobile) {
+    background-position: 67% 20%; // [1]
+    background-size: 250%; // [1]
+  }
+
+  @keyframes fade-in-animation {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  &.show {
+    display: block;
+    animation-name: fade-in-animation;
+    animation-duration: 150ms;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+  }
+
+  //
+  // Header
+  //
+  &__header {
+    @include admin-bar;
+
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 60px;
+
+    .logo-link {
+      width: 180px;
+      height: 54px;
+
+      .svg-icon {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .search-overlay-close-btn {
+      position: relative;
+      top: 0;
+      right: 0;
+      width: 50px;
+      height: 50px;
+      padding: 15px;
+      color: #fff;
+
+      .svg-icon {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    @include r(laptop-max) {
+      padding-right: 35px;
+    }
+
+    @include r(laptop-small) {
+      padding-top: 4px;
+
+      .logo-link {
+        width: 120px;
+        height: 35px;
+      }
+    }
+
+    // [2] - to match the spacing set by the header nav container
+    @include r(tablet) {
+      padding-left: 35px; // [2]
+      padding-right: 20px; // [2]
+    }
+
+    @include r(mobile) {
+      padding-left: 18px; // [2]
+      padding-right: 3px; // [2]
+    }
+  }
+
+  &__inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding: 0 18%; // allows form's width to match the background graphic's width
+
+    @include r(tablet, mobile) {
+      padding: 0 10%;
+    }
+
+    @include r(mobile) {
+      justify-content: flex-start;
+    }
+  }
+
+  //
+  // Body
+  //
+  &__body {
+    @include r(mobile) {
+      position: relative;
+      top: 200px;
+    }
+
+    // Wordpress search form
+    .search-form {
+      $border-style: 2px solid $grey--light;
+
+      position: relative;
+
+      .search-field {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        border: none;
+        border-bottom: $border-style;
+        padding: 0 70px 4px 8px;
+        font-family: $kamerik;
+        font-size: 36px;
+        font-weight: $f-bold;
+        line-height: 1;
+        color: $white;
+        background-color: transparent;
+        transition: border-color 150ms;
+
+        &:focus {
+          border-bottom-color: #fff;
+          outline: none;
+        }
+
+        // Icon added by webkit browsers that allow clearing the search input fields,
+        // however since we don't seem to be able to style this element, we'll hide
+        // it instead
+        &::-webkit-search-cancel-button {
+          display: none;
+        }
+
+        @include placeholder-style {
+          color: $white;
+          opacity: 1;
+        }
+
+        @include r(mobile) {
+          font-size: 20px;
+        }
+      }
+
+      .search-submit-btn {
+        position: absolute;
+        bottom: 0;
+        right: 8px;
+        padding: 10px 8px 18px 20px;
+
+        svg {
+          width: 24px;
+          height: 24px;
+          color: #fff;
+        }
+      }
+
+      // Hides filters when showing overlay
+      .search-form__filters { display: none; }
+
+      @include r(mobile) {
+        .search-field {
+          padding-right: 50px;
+        }
+
+        .search-submit-btn {
+          padding-bottom: 11px;
+          padding-left: 10px;
+
+          svg {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+
+    //
+    // Suggested terms
+    //
+    .search-suggested-terms-list {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      padding-top: 45px;
+
+      .btn {
+        color: #fff;
+
+        &::before { border-color: $grey--light; }
+      }
+    }
+  }
+}

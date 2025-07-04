@@ -1,0 +1,88 @@
+// -----------------------------------------------------------------------------
+// CHOICES.JS STYLES
+// https://www.npmjs.com/package/choices.js
+// -----------------------------------------------------------------------------
+@import "~styles/config";
+
+.choices {
+  $root: &;
+  $border-style: 1px solid rgb(35 31 32 / 25%);
+
+  position: relative;
+
+  &__inner {
+    border: $border-style;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 17px;
+      width: 12px;
+      height: 8px;
+      margin: auto;
+      font-size: 22px;
+      background-image: url("~img/select-down-arrow.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      transition: transform 150ms;
+    }
+  }
+
+  &__item {
+    padding: 12px 14px 8px;
+    font-size: 14px;
+    font-weight: $f-regular;
+    line-height: 20px;
+    transition: background-color 150ms;
+    cursor: pointer;
+
+    &.is-highlighted {
+      background-color: $white--off;
+    }
+
+    &.is-selected {
+      background-color: $white--off;
+    }
+  }
+
+  &__list--single {
+    #{$root}__item {
+      padding-right: 47px;
+    }
+  }
+
+  &__list--dropdown {
+    position: absolute;
+    z-index: 20;
+    display: none;
+    box-sizing: border-box;
+    width: 100%;
+    border: $border-style;
+    border-top: none;
+    background-color: $white;
+
+    &.is-active {
+      display: block;
+    }
+
+    .choices__list {
+      position: relative;
+      top: -1px;
+    }
+  }
+
+  &.is-focused {
+    outline: none;
+  }
+
+  &.is-open {
+    #{$root}__inner {
+      &::after {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+}

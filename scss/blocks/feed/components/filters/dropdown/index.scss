@@ -1,0 +1,243 @@
+@import "~styles/config";
+
+.filters-list {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 750px;
+  border-bottom: 2px solid $green;
+  margin-bottom: 55px;
+  padding-bottom: 10px;
+  gap: 60px;
+
+  label {
+    font-size: 18px;
+    font-weight: $f-bold;
+    text-transform: uppercase;
+  }
+
+  @include r(tablet, desktop) {
+    max-width: 600px;
+  }
+
+  @include r(mobile) {
+    max-width: none;
+    gap: 30px;
+
+    label {
+      font-size: 14px;
+    }
+  }
+}
+
+.filter-dropdown {
+  $root: &;
+
+  position: relative;
+  flex-grow: 1;
+
+  // Resets styles of any list
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__selection {
+    display: flex;
+    height: 42px;
+    overflow: hidden;
+    border: 1px solid $grey--light;
+
+    li,
+    span {
+      padding: 8px 20px;
+      font-size: 18px;
+      font-weight: $f-bold;
+      text-transform: uppercase;
+      user-select: none;
+    }
+
+    ul,
+    span {
+      flex-grow: 1;
+    }
+
+    span {
+      cursor: pointer;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      background-color: $black--off;
+
+      // Close icon
+      i {
+        position: relative;
+        top: 1px;
+        margin-left: 5px;
+        font-size: 21px;
+      }
+    }
+
+    // Toggle dropdown icon
+    > .btn {
+      display: flex;
+      align-items: flex-start;
+
+      i {
+        padding: 10px 17px;
+        font-size: 21px;
+        transition: transform 150ms;
+      }
+    }
+  }
+
+  &__hidden-selection-counter {
+    padding: 10px 7px;
+    font-size: 18px;
+    font-weight: $f-bold;
+    line-height: 1;
+  }
+
+  &__body {
+    position: absolute;
+    display: none;
+    width: 100%;
+    border: 1px solid $grey--light;
+    border-top: none;
+    padding: 30px 20px 24px;
+    background-color: #fff;
+  }
+
+  &__clear-all-btn {
+    font-size: 18px;
+    font-weight: $f-bold;
+    color: $green;
+
+    &:hover {
+      color: $black--off;
+    }
+  }
+
+  hr {
+    margin: 20px 0 25px;
+  }
+
+  &__options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+
+    li {
+      @include checkbox-field-custom-style;
+
+      label {
+        font-size: 18px;
+        text-transform: uppercase;
+
+        &::after {
+          top: 6px;
+          left: 6.2px;
+        }
+
+        @include r(mobile) {
+          &::after {
+            top: 2px;
+            left: 7.2px;
+          }
+        }
+      }
+    }
+  }
+
+  //
+  // Expanded dropdown
+  //
+  &.dropdown-expanded {
+    .filter-dropdown__selection {
+      height: auto;
+      overflow: visible;
+
+      > .btn {
+        i {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+
+    .filter-dropdown__body {
+      display: block;
+    }
+  }
+
+  @include r(tablet, desktop) {
+    #{$root}__selection {
+      li,
+      span {
+        font-size: 16px;
+      }
+    }
+  }
+
+  @include r(mobile) {
+    #{$root}__selection {
+      li,
+      span {
+        padding: 8px 10px;
+        font-size: 14px;
+
+        i {
+          font-size: 16px;
+        }
+      }
+
+      > .btn {
+        i {
+          padding: 11px 10px;
+          font-size: 18px;
+        }
+      }
+    }
+
+    #{$root}__body {
+      padding: 20px 10px;
+    }
+
+    hr {
+      margin: 14px 0 20px;
+    }
+
+    #{$root}__hidden-selection-counter {
+      padding: 10px 4px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    #{$root}__clear-all-btn {
+      font-size: 16px;
+    }
+
+    #{$root}__options {
+      grid-template-columns: 1fr;
+      gap: 10px;
+
+      li {
+        label {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

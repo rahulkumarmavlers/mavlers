@@ -1,0 +1,79 @@
+.vacancy-card {
+  position: relative;
+  overflow: hidden;
+  padding: 24px 16px;
+  background: $grey--light;
+  cursor: pointer;
+
+  @include r(laptop, desktop, ultrawide) {
+    padding: 26px;
+  }
+
+  a {
+    text-decoration: none;
+    color: $black--off;
+  }
+
+  &:hover {
+    background: url("~img/crop-dark-green-bg.png");
+    background-repeat: no-repeat;
+    background-position: 100% 42%;
+    background-size: 120%;
+
+    a,
+    .btn {
+      color: $white;
+    }
+
+    .btn {
+      padding-left: 38px;
+
+      &::before {
+        left: 16px;
+      }
+    }
+
+    .category {
+      border: solid 1px $white;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    z-index: 10;
+  }
+
+  &__categories {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 24px;
+    gap: 16px;
+
+    .category {
+      border: solid 1px $black--off;
+      border-radius: 20px;
+      margin: 0;
+      padding: 5px 12px 2px;
+      font-family: $orkney;
+      font-size: 12px;
+      font-weight: $f-semibold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+
+    @include r(tablet, laptop, desktop, ultrawide) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .btn {
+    @include r(mobile) {
+      font-size: 14px;
+    }
+  }
+}

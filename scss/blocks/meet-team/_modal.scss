@@ -1,0 +1,232 @@
+// -----------------------------------------------------------------------------
+// MEET THE TEAM - MODAL WINDOW
+// -----------------------------------------------------------------------------
+
+.meet-team-modal {
+  @include admin-bar;
+
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: $z-index-header-nav;
+  overflow: auto;
+  padding: 145px 36px 60px;
+  background-color: rgba(#000, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: all $a-short;
+
+  @include r(tablet-small) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  @include r(mobile) {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__container {
+    width: 100%;
+    max-width: 945px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 48px;
+    background-color: #fff;
+
+    @include r(tablet-max) {
+      padding: 30px;
+    }
+  }
+
+  &__inner {
+    position: relative;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    max-width: 960px;
+    margin: 0 auto;
+    gap: 48px;
+
+    &.single-col {
+      grid-template-columns: 1fr;
+    }
+
+    @include r(tablet-max) {
+      grid-template-columns: 240px 1fr;
+      gap: 30px;
+    }
+
+    @include r(tablet-small) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  // [1] - negative values for cancelling out the container's padding
+  &__close {
+    @include btn-reset;
+
+    position: absolute;
+    top: -32px; // [1]
+    right: -32px; // [1]
+    display: flex;
+    align-items: center;
+    font-family: $orkney;
+    line-height: 1;
+    color: $black--off;
+    gap: 8px;
+
+    svg {
+      position: relative;
+      top: -2px;
+      pointer-events: none;
+      width: 16px;
+      height: 16px;
+      color: $green;
+
+      path { stroke-width: 5px; }
+    }
+
+    @include r(tablet-max) {
+      top: -20px; // [1]
+      right: -20px; // [1]
+    }
+  }
+
+  //
+  // Left column content
+  //
+  &__left-col {
+    @include r(tablet-small) {
+      display: none;
+    }
+  }
+
+  &__image {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+
+  //
+  // Right column content
+  //
+  &__right-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+
+    @include r(tablet-small) {
+      .meet-team-modal__info {
+        .meet-team-modal__image {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__info {
+    .meet-team-modal__title,
+    .meet-team-modal__subtitle,
+    .wysiwyg {
+      font-family: $orkney;
+    }
+
+    .meet-team-modal__image {
+      display: none;
+    }
+
+    .meet-team-modal__title {
+      margin-bottom: 10px;
+      color: $green--dark;
+    }
+
+    .meet-team-modal__subtitle {
+      margin: 0;
+      line-height: 24px;
+    }
+
+    .meet-team-modal__title,
+    .meet-team-modal__subtitle {
+      & + .meet-team-modal__image {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .wysiwyg {
+    border-top: 1px solid $green;
+    margin-top: 18px;
+    padding-top: 20px;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      line-height: 1;
+    }
+
+    @include r(tablet-small) {
+      margin-top: 20px;
+    }
+  }
+
+  &__social {
+    a {
+      display: flex;
+      flex: 0 0 auto;
+      align-items: center;
+      width: fit-content;
+      line-height: 1;
+      text-decoration: none;
+      gap: 8px;
+
+      span:first-child {
+        display: block;
+        align-self: flex-start;
+        width: 19px;
+        height: 19px;
+        border-radius: 2px;
+        background-color: $green--dark;
+
+        svg {
+          display: block;
+          width: 100%;
+          height: 100%;
+
+          rect { fill: $green--dark; }
+          path { fill: #fff; }
+        }
+      }
+
+      span:last-child {
+        position: relative;
+        top: 2px;
+        line-height: 1;
+        text-decoration: underline;
+        color: $black--off;
+      }
+    }
+  }
+}

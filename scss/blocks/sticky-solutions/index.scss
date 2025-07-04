@@ -1,0 +1,378 @@
+@import "~styles/config";
+
+.sticky-solutions-block {
+  position: relative;
+  padding: 95px 0 120px;
+
+  @include r(laptop-small) {
+    padding: 90px 0 100px;
+  }
+
+  @include r(tablet-max) {
+    padding: 70px 0;
+  }
+
+  &__heading {
+    margin-bottom: 31px;
+
+    @include r(tablet-max) {
+      margin-bottom: 20px;
+    }
+
+    @include r(tablet-small) {
+      margin-bottom: 36px;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 13px;
+
+      @include r(tablet-small) {
+        margin-bottom: 5px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      span {
+        font-size: 14px;
+        letter-spacing: 2.8px;
+        text-transform: uppercase;
+
+        @include r(laptop-small) {
+          font-size: 13px;
+        }
+
+        @include r(tablet-small) {
+          font-size: 12px;
+          letter-spacing: 3px;
+        }
+      }
+    }
+
+    h2 {
+      margin-top: 0;
+      color: $green;
+
+      &.dark-green-title {
+        color: $green--dark;
+      }
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0 0 25px 5px;
+    list-style: none;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    li {
+      position: relative;
+      margin-bottom: 10px;
+      padding-left: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 9px;
+        left: 4px;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: $green;
+
+        @include r(tablet-max) {
+          top: 7px;
+        }
+      }
+
+      a {
+        display: inline-block;
+        vertical-align: top;
+        color: inherit;
+        transition: all $a-short ease-in-out;
+
+        &:hover {
+          color: $green;
+        }
+      }
+    }
+  }
+
+  &__left {
+    position: sticky;
+    top: 95px;
+    width: 51%;
+    max-width: 535px;
+
+    @include r(laptop-small) {
+      width: 55%;
+      padding-right: 50px;
+    }
+
+    @include r(tablet-max) {
+      width: 53%;
+      max-width: none;
+      padding-right: 30px;
+    }
+
+    @include r(tablet-small) {
+      position: static;
+      width: 100%;
+      padding: 0;
+    }
+
+    & > p {
+      margin-top: 0;
+      margin-bottom: 20px;
+
+      @include r(tablet-max) {
+        margin-bottom: 13px;
+      }
+
+      strong {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 26px;
+
+        @include r(laptop-small) {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+
+      a {
+        display: inline-block;
+        vertical-align: top;
+        color: inherit;
+        transition: all $a-short ease-in-out;
+
+        &:hover {
+          color: $green;
+        }
+      }
+    }
+
+    .link-primary {
+      margin-top: 18px;
+
+      @include r(tablet-small) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__right {
+    width: 49%;
+    margin-left: auto;
+    padding: 52px 0 0;
+
+    @include r(laptop-small) {
+      width: 45%;
+    }
+
+    @include r(tablet-max) {
+      width: 47%;
+      padding: 43px 0 0;
+    }
+
+    @include r(tablet-small) {
+      width: 100%;
+    }
+  }
+
+  &__tiles {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    margin-bottom: 26px;
+    padding: 27px 48px 26px;
+    text-decoration: none;
+    color: $black--off;
+    background: $grey--light;
+    transition: all $a-short ease-in-out;
+
+    @include r(laptop-small) {
+      padding: 27px 35px;
+    }
+
+    @include r(tablet-max) {
+      padding: 20px;
+    }
+
+    @include r(tablet-small) {
+      margin-bottom: 15px;
+      padding: 20px 15px 18px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    h4 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-family: $orkney;
+
+      @include r(tablet-small) {
+        margin-bottom: 7px;
+      }
+    }
+
+    p {
+      margin: 0 0 15px;
+    }
+  }
+
+  &__hoverbg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -11;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transform: scale(1.3);
+      transition: all $a-short ease-in-out;
+      object-fit: cover;
+    }
+  }
+
+  a.sticky-solutions-block__tiles {
+    &:hover {
+      color: $white;
+
+      .sticky-solutions-block__hoverbg {
+        img {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      .link-primary {
+        color: $white;
+      }
+    }
+  }
+
+  &__img-text {
+    position: relative;
+    margin-bottom: 55px;
+    padding-left: 118px;
+
+    @include r(laptop-small) {
+      margin-bottom: 45px;
+      padding-left: 105px;
+    }
+
+    @include r(tablet-max) {
+      margin-bottom: 35px;
+      padding-left: 90px;
+    }
+
+    @include r(tablet-small) {
+      margin-bottom: 25px;
+      padding-left: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__image {
+    @include r(tablet-small) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__img-icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 96px;
+    margin: auto;
+    transform: translateY(-50%);
+
+    @include r(laptop-small) {
+      width: 86px;
+    }
+
+    @include r(tablet-max) {
+      width: 78px;
+    }
+
+    @include r(tablet-small) {
+      position: static;
+      margin: 0;
+      transform: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+  }
+
+  &__img-title {
+    @include r(tablet-small) {
+      width: calc(100% - 78px);
+      padding-top: 5px;
+      padding-left: 17px;
+    }
+
+    h5 {
+      margin: 0 0 1px;
+      font-family: $orkney;
+    }
+  }
+
+  &__text {
+    max-width: 406px;
+
+    @include r(tablet-small) {
+      max-width: none;
+    }
+
+    p {
+      margin-top: 0;
+    }
+  }
+
+  &__img-text-wrap {
+    .sticky-solutions-block__right {
+      padding: 132px 0 0;
+
+      @include r(laptop-small) {
+        padding: 80px 0 0;
+      }
+
+      @include r(tablet-max) {
+        padding: 48px 0 0;
+      }
+    }
+  }
+}

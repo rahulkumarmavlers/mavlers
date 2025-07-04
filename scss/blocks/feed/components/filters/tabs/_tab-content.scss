@@ -1,0 +1,77 @@
+// -----------------------------------------------------------------------------
+// FEED FILTERS :: TAB CONTENT
+// -----------------------------------------------------------------------------
+
+.feed-filters-tabs {
+  // [1] required for 'slide-in' VueJS transition
+  margin-bottom: 60px;
+
+  @include r(tablet) {
+    margin-bottom: 40px;
+  }
+
+  @include r(mobile) {
+    margin-bottom: 30px;
+  }
+
+  &.tab-open {
+    margin-bottom: 30px;
+  }
+
+  .filter-tab-content-item {
+    overflow: hidden; // [1]
+    transition: height 0.3s ease; // [1]
+  }
+
+  .filter-tab__content {
+    padding-top: 32px;
+  }
+
+  .filters-list__actions {
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid $green--dark;
+    margin: 20px 0;
+    padding-top: 20px;
+    gap: 36px;
+  }
+
+  .filters-list__clear-filters-btn,
+  .filters-list__search-btn {
+    font-size: 16px;
+    line-height: 1.4;
+    color: #000;
+    cursor: pointer;
+  }
+
+  .filters-list__clear-filters-btn {
+    border: solid 1px $green--dark;
+    border-radius: 30px;
+    padding: 14px 50px 10px 30px;
+    font-weight: $f-semibold;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 18px;
+      right: 26px;
+      display: inline-block;
+      width: 13px;
+      height: 11px;
+      background-image: url("~img/icons/dark-green-cross.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  .filters-list__search-btn {
+    border: none;
+    padding: 13px 30px 10px;
+    font-size: 16px;
+    font-weight: $f-semibold;
+    color: $white;
+    background-color: $green--dark;
+  }
+}

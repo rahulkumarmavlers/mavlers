@@ -1,0 +1,92 @@
+@import "~styles/config";
+
+.feed-sortby {
+  position: relative;
+  top: -30px;
+  z-index: 20;
+
+  &__content {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+
+    @include r(mobile) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__current-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #000;
+    cursor: pointer;
+    user-select: none;
+    gap: 7px;
+
+    &::after {
+      content: "";
+      position: relative;
+      top: 2px;
+      display: block;
+      width: 13px;
+      height: 9px;
+      background-image: url("~img/select-down-arrow.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+    @include r(mobile) {
+      font-size: 16px;
+    }
+  }
+
+  &__dropdown {
+    position: absolute;
+    top: 35px;
+    right: 0;
+    display: none;
+    width: 100%;
+    max-width: 180px;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    box-shadow: 0 8px 12px -1px rgba(#000, 0.3);
+
+    @include r(mobile) {
+      left: 0;
+      right: auto;
+    }
+
+    li { list-style: none; }
+
+    label {
+      display: block;
+      width: 100%;
+      padding: 6px 15px;
+      font-size: 18px;
+      cursor: pointer;
+
+      @include hover {
+        background-color: #eee;
+      }
+
+      @include r(mobile) {
+        font-size: 16px;
+      }
+    }
+
+    input {
+      @include visually-hidden-input-field;
+
+      &:checked + label {
+        color: #fff;
+        background-color: #000;
+      }
+    }
+
+    &.expand { display: block; }
+  }
+}

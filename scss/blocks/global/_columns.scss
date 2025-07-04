@@ -1,0 +1,36 @@
+// -----------------------------------------------------------------------------
+// WORDPRESS COLUMNS BLOCK
+// -----------------------------------------------------------------------------
+
+.wp-block-columns {
+  gap: 80px;
+
+  // [1] - Default column layout to be 50/50, if the user chooses a different column layout,
+  // Wordpress will add the appropriate flex-basis widths as inline styles, overriding the
+  // default 50/50.
+  > .wp-block-column {
+    flex-basis: 50%; // [1]
+    flex-grow: 1;
+    align-self: flex-start;
+
+    // Removes margins for elements on the edge
+    > * {
+      &:first-child { margin-top: 0; }
+      &:last-child { margin-bottom: 0; }
+    }
+  }
+
+  @include r(mobile, tablet) {
+    flex-wrap: wrap !important;
+    gap: 40px;
+
+    .wp-block-column {
+      flex-basis: 100% !important;
+      flex-grow: 1;
+    }
+  }
+
+  @include r(mobile) {
+    gap: 20px;
+  }
+}

@@ -1,0 +1,23 @@
+@import "~styles/config";
+
+.error404 {
+  .warning-404 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    @include r(mini-laptop) {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+
+    @include r(tablet-portrait) {
+      padding-top: 70px;
+      padding-bottom: 70px;
+    }
+
+    @include r(tablet-small) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  }
+}

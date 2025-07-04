@@ -1,0 +1,10 @@
+@import "~styles/config";
+@import "./numbered-pagination";
+@import "./next-prev-pagination";
+
+.wp-pagination {
+  position: relative;
+  border-top: 1px solid $green;
+  margin-top: 45px;
+  padding: 65px 0 40px;
+}

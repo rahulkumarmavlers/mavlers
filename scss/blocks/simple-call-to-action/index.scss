@@ -1,0 +1,57 @@
+@import "~styles/config";
+
+.simple-call-to-action-block {
+  position: relative;
+  padding: 52px 0 63px;
+  background: $grey--light;
+
+  @include r(tablet-small) {
+    padding: 58px 0 63px;
+  }
+
+  &__wrap {
+    max-width: 540px;
+    margin: 0 auto;
+    text-align: center;
+
+    h3 {
+      margin: 0 0 30px;
+      color: $green;
+
+      &.dark-green-title {
+        color: $green--dark;
+      }
+
+      @include r(tablet-max) {
+        margin: 0 0 20px;
+      }
+
+      @include r(tablet-small) {
+        margin: 0 0 11px;
+      }
+    }
+
+    p {
+      margin: 0 0 41px;
+      padding: 0 5px;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 26px;
+
+      @include r(tablet-max) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      @include r(tablet-small) {
+        margin-bottom: 17px;
+        padding: 0 12px;
+      }
+    }
+
+    .btn {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}

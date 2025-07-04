@@ -1,0 +1,19 @@
+//
+// Creates an overlay to a given element (normally the body)
+// so we can see what the IntersectionObserver area is.
+//
+@mixin debug-add-intersection-observer-layer($element, $top, $bottom) {
+  #{$element} {
+    &::after {
+      content: "";
+      position: fixed;
+      top: $top;
+      bottom: $bottom;
+      left: 0;
+      right: 0;
+      z-index: $z-index-header-nav;
+      width: 100%;
+      background-color: rgba(#f00, 0.3);
+    }
+  }
+}

@@ -1,0 +1,136 @@
+@import "~styles/config";
+@import "./modal";
+
+.meet-team-block {
+  position: relative;
+  padding: 100px 0;
+
+  .meet-team__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+
+    @include r(tablet) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include r(tablet-small) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include r(mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .meet-team__item {
+    display: flex;
+    flex-direction: column;
+
+    &.no-img {
+      .meet-team-item__content-inner { align-items: flex-start; }
+    }
+
+    &.has-modal {
+      @include hover {
+        .meet-team-item__img {
+          &::after { opacity: 1; }
+
+          img { transform: scale(1.1); }
+        }
+      }
+    }
+  }
+
+  .meet-team-item__modal-button {
+    @include btn-reset;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+  }
+
+  .meet-team-item__img {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 100%;
+
+    // Dark overlay
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(#000, 0.25);
+      opacity: 0;
+      transition: opacity $a-short;
+    }
+
+    img {
+      will-change: transform; // addresses issue in Safari that causes Linkedin SVG icon to move when image scales up
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: transform $a-short;
+    }
+
+    .meet-team-item__modal-button { z-index: 2; }
+  }
+
+  .meet-team-item__content-outer {
+    position: relative;
+    top: -1px; // addresses gap shown on Safari when resizing
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    padding: 20px 24px 16px;
+    background: $green--dark;
+  }
+
+  .meet-team-item__content-inner {
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    color: $white;
+    gap: 10px;
+  }
+
+  .meet-team-item__info {
+    position: relative;
+
+    > * { margin: 0; }
+
+    h6 {
+      font-family: $orkney;
+      font-weight: $f-medium;
+
+      + p { margin-top: 2px; }
+    }
+  }
+
+  .meet-team-item__social {
+    a {
+      display: flex;
+      width: 28px;
+      height: auto;
+
+      .svg-icon {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

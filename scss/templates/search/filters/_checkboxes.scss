@@ -1,0 +1,64 @@
+// -----------------------------------------------------------------------------
+// SITE SEARCH FILTER - 'CHECKBOXES' STYLE
+// -----------------------------------------------------------------------------
+
+.site-search-content {
+  .search-form {
+    .search-form__filters-header {
+      margin-bottom: 24px;
+      padding: 22px 24px 20px;
+      font-family: $kamerik;
+      font-weight: $f-bold;
+      color: #fff;
+      background-color: $green--dark;
+    }
+
+    .search-form__filters-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .search-form__filter-item {
+      // Checkbox item
+      label {
+        position: relative;
+        display: block;
+        border: 1px solid $green--dark;
+        border-radius: 50px;
+        padding: 16px 30px 14px;
+        font-family: $kamerik;
+        font-size: 16px;
+        font-weight: $f-bold;
+        cursor: pointer;
+
+        &::after {
+          position: absolute;
+          top: 50%;
+          right: 27px;
+          display: block;
+          width: 12px;
+          height: 12px;
+          background-image: url("~img/white-cross.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          transform: translateY(-50%);
+        }
+      }
+
+      input {
+        @include visually-hidden-input-field;
+      }
+
+      // Shows 'checked' state
+      input:checked + label {
+        padding-right: 46px;
+        color: #fff;
+        background-color: $green--dark;
+
+        &::after { content: ""; }
+      }
+    }
+  }
+}

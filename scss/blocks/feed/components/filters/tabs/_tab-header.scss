@@ -1,0 +1,82 @@
+// -----------------------------------------------------------------------------
+// FEED FILTERS :: TAB HEADERS
+// -----------------------------------------------------------------------------
+
+.feed-filters-tabs {
+  .filter-tabs__headers-list {
+    display: flex;
+  }
+
+  .filter-tab__header {
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: space-between;
+    border-left: 1px solid $green--dark;
+    border-right: 1px solid transparent;
+    padding: 18px;
+    font-family: $kamerik;
+    font-size: 16px;
+    font-weight: $f-bold;
+    white-space: nowrap;
+    line-height: 1.4;
+    color: $black;
+    background-color: $white;
+    transition: all ease-in 0.25s;
+    cursor: pointer;
+    user-select: none;
+
+    &::after {
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 1px;
+    }
+
+    &:last-child { border-right-color: $green--dark; }
+
+    &.active {
+
+      &::after { content: ""; }
+    }
+
+    &.active,
+    &:hover {
+      color: $white;
+      background-color: $green--dark;
+
+      .icon--plus-minus {
+        background-color: $white;
+
+        &::before { background-color: $white; }
+
+        &.collapse {
+          background-color: $white;
+
+          &::before { background-color: $white; }
+        }
+      }
+    }
+
+    .icon--plus-minus {
+      margin-right: 10px;
+      background-color: $black;
+
+      &::before { background-color: $black; }
+
+      &.collapse {
+        background-color: $black;
+
+        &::before { background-color: $black; }
+      }
+    }
+  }
+
+  .filter-tab__counter {
+    font-weight: $f-bold;
+    color: $black;
+  }
+}

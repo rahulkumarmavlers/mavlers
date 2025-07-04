@@ -1,0 +1,39 @@
+.wp-block-table {
+  $border-spacing: 24px;
+
+  table {
+    border-collapse: separate;
+    border-spacing: $border-spacing 0;
+    margin-left: -$border-spacing; // negates the outer spacing on the left hand side
+  }
+
+  td {
+    vertical-align: top;
+    border: 0;
+    padding: 15px 0 16px;
+    font-size: 18px;
+  }
+
+  tr {
+    td {
+      border-bottom: 1px solid $green;
+    }
+
+    // Headers
+    &:first-child {
+      td {
+        border-width: 3px;
+        font-size: 18px;
+        font-weight: $f-bold;
+        white-space: nowrap;
+        text-transform: uppercase;
+      }
+    }
+
+    &:last-child {
+      td {
+        border-bottom: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,297 @@
+@import "~styles/config";
+
+.secondary-hero-block {
+  position: relative;
+  padding-top: 121px;
+  padding-bottom: 86px;
+
+  @include r(laptop-small) {
+    padding-bottom: 66px;
+  }
+
+  @include r(tablet-max) {
+    padding-top: 100px;
+    padding-bottom: 45px;
+  }
+
+  @include r(tablet-small) {
+    overflow: hidden;
+    padding-top: 88px;
+    padding-bottom: 66px;
+  }
+
+  &.secondary-hero-block__below-grey {
+    background: $grey--light;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 86px);
+
+    @include r(laptop-small) {
+      height: calc(100% - 66px);
+    }
+
+    @include r(tablet-max) {
+      height: calc(100% - 45px);
+    }
+
+    @include r(tablet-small) {
+      bottom: 66px;
+      height: auto;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      mix-blend-mode: multiply;
+      background-color: $green--dark;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center left;
+    }
+  }
+
+  &__rippleimg {
+    position: relative;
+    z-index: 1;
+    width: 35%;
+    margin-top: auto;
+    margin-bottom: -86px;
+
+    @include r(laptop-small) {
+      width: 37%;
+      margin-bottom: -66px;
+    }
+
+    @include r(tablet-max) {
+      width: 39%;
+      margin-bottom: -45px;
+    }
+
+    @include r(tablet-small) {
+      position: relative;
+      right: -55px;
+      width: 96%;
+      margin-bottom: -66px;
+      margin-left: auto;
+    }
+
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__main {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+
+  &__caption {
+    position: relative;
+    z-index: 11;
+    width: 51%;
+    margin-right: 4%;
+    padding-top: 33px;
+    padding-bottom: 63px;
+
+    @include r(laptop-small) {
+      width: 57%;
+      margin-right: 6%;
+    }
+
+    @include r(tablet-max) {
+      width: 58%;
+      margin-right: 3%;
+      padding-top: 25px;
+      padding-bottom: 50px;
+    }
+
+    @include r(tablet-small) {
+      width: 100%;
+      margin-right: 0;
+      padding-top: 0;
+      padding-bottom: 12px;
+    }
+
+    h1 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      color: $white;
+
+      @include r(tablet-small) {
+        margin-bottom: 11px;
+      }
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 28px;
+      color: $white;
+
+      @include r(tablet-small) {
+        margin-bottom: 18px;
+      }
+
+      a {
+        display: inline-block;
+        vertical-align: top;
+        color: inherit;
+        transition: all $a-short ease-in-out;
+
+        &:hover {
+          color: $green;
+        }
+      }
+    }
+  }
+
+  &__staticimg {
+    overflow: hidden;
+
+    .secondary-hero-block__bg {
+      background: $green--dark;
+
+      &::after {
+        display: none;
+      }
+
+      img {
+        position: absolute;
+        top: 31%;
+        bottom: 0;
+        right: -24%;
+        width: 88%;
+        height: 181%;
+        opacity: 0;
+        transform: translateY(-22%) translateX(-21%);
+
+        @include r(tablet-small) {
+          display: none;
+        }
+      }
+    }
+
+    .secondary-hero-block__rippleimg {
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        right: 0;
+        z-index: -1;
+        width: 300vw;
+        height: 86px;
+        background: $white;
+        transform: translateX(-50%);
+
+        @include r(laptop-small) {
+          height: 66px;
+        }
+
+        @include r(tablet-max) {
+          height: 45px;
+        }
+
+        @include r(tablet-small) {
+          height: 66px;
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 32%;
+        right: -57.5%;
+        z-index: -11;
+        width: 268.5%;
+        height: 225%;
+        background: url("~img/crop-dark-green-bg.png");
+        background-position: center center;
+        background-size: cover;
+        transform: translateY(-36%);
+
+        @include r(laptop-small) {
+          top: 40%;
+          right: -60.5%;
+          width: 277%;
+          height: 235%;
+          transform: translateY(-40%);
+        }
+
+        @include r(tablet-small) {
+          display: none;
+        }
+      }
+    }
+
+    &.secondary-hero-block__below-grey {
+      background: transparent;
+
+      .secondary-hero-block__rippleimg::before {
+        background: $grey--light;
+      }
+    }
+  }
+}
+
+.content__overlap-below {
+  .secondary-hero-block {
+    margin-bottom: -86px;
+
+    @include r(laptop-small) {
+      margin-bottom: -66px;
+    }
+
+    @include r(tablet-max) {
+      margin-bottom: -45px;
+    }
+
+    @include r(tablet-small) {
+      margin-bottom: -66px;
+    }
+  }
+
+  .secondary-hero-block__rippleimg {
+    z-index: auto;
+
+    svg {
+      position: relative;
+      z-index: 11;
+    }
+  }
+
+  .secondary-hero-block__main {
+    z-index: auto;
+  }
+
+  .secondary-hero-block__staticimg {
+    .secondary-hero-block__rippleimg {
+      &::after {
+        z-index: 1;
+      }
+    }
+  }
+}
+
+// .space-bottom {
+//   margin-bottom: 60px;
+// }

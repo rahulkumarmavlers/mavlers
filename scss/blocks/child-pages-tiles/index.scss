@@ -1,0 +1,129 @@
+@import "~styles/config";
+
+.child-pages-tiles-block {
+  position: relative;
+  z-index: 1;
+  padding: 120px 0 90px;
+
+  @include r(laptop-small) {
+    padding: 100px 0 80px;
+  }
+
+  @include r(tablet-max) {
+    padding: 70px 0;
+  }
+
+  @include r(tablet-small) {
+    padding: 50px 0;
+  }
+
+  &__bgimg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    width: 657px;
+    height: 576px;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: cover;
+
+    @include r(laptop-small) {
+      width: 537px;
+      height: 509px;
+    }
+
+    @include r(tablet-max) {
+      width: 367px;
+      height: 329px;
+    }
+
+    @include r(tablet-small) {
+      display: none;
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -12px;
+    padding: 0 106px;
+
+    @include r(laptop-small) {
+      padding: 0 75px;
+    }
+
+    @include r(tablet-max) {
+      padding: 0;
+    }
+  }
+
+  &__column {
+    width: 50%;
+    margin-top: 50px;
+    padding: 0 12px;
+
+    @include r(tablet-small) {
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 43px;
+    }
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      @include r(tablet-small) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__bg {
+    width: 100%;
+    margin-bottom: 44px;
+    padding-bottom: 59.5%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    @include r(laptop-small) {
+      margin-bottom: 35px;
+    }
+
+    @include r(tablet-max) {
+      margin-bottom: 25px;
+    }
+
+    @include r(tablet-small) {
+      margin-bottom: 20px;
+      padding-bottom: 56.5%;
+    }
+  }
+
+  &__inner {
+    height: 100%;
+
+    h4 {
+      margin-top: 0;
+      margin-bottom: 7px;
+      font-family: $orkney;
+
+      @include r(tablet-small) {
+        margin-bottom: 4px;
+      }
+    }
+
+    p {
+      max-width: 405px;
+      margin: 0 0 13px;
+
+      @include r(tablet-small) {
+        max-width: none;
+        margin-bottom: 4px;
+      }
+    }
+  }
+}

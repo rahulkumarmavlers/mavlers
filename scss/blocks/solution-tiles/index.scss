@@ -1,0 +1,360 @@
+@import "~styles/config";
+
+.solution-tiles-block {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  padding: 91px 0 120px;
+  background: $grey--light;
+
+  @include r(tablet-small) {
+    padding: 43px 0 56px;
+  }
+
+  &__heading {
+    margin-bottom: 59px;
+    text-align: center;
+
+    @include r(laptop-small) {
+      margin-bottom: 45px;
+    }
+
+    @include r(tablet-max) {
+      margin-bottom: 20px;
+    }
+
+    @include r(tablet-small) {
+      margin-bottom: 36px;
+    }
+
+    p {
+      margin-bottom: 12px;
+
+      @include r(tablet-small) {
+        margin-bottom: 5px;
+      }
+
+      span {
+        display: block;
+        font-size: 14px;
+        letter-spacing: 3.5px;
+        text-transform: uppercase;
+
+        @include r(laptop-small) {
+          font-size: 13px;
+        }
+
+        @include r(tablet-small) {
+          font-size: 12px;
+        }
+      }
+    }
+
+    h2 {
+      margin-top: 0;
+      color: $green;
+
+      @include r(tablet-small) {
+        max-width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      @include r(tablet-small) {
+        max-width: 315px;
+      }
+
+      &.dark-green-title {
+        color: $green--dark;
+      }
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  &__wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding: 0 106px;
+
+    .flickity-viewport {
+      overflow: initial;
+    }
+
+    @include r(laptop-small) {
+      padding: 0 40px;
+    }
+
+    @include r(tablet-small) {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    @include r(tablet-max) {
+      padding: 0;
+    }
+
+    &.flickity-enabled {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__column {
+    /* make sure this sits on top of your overlay link */
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: hidden;
+    padding: 25px 30px 30px;
+    text-decoration: none;
+    color: $white;
+    background: $green--dark;
+    transition: all $a-short ease-in-out;
+
+    &.has-image {
+      .solution-tiles-block__hoverbg {
+        display: none;
+      }
+
+      a.solution-tiles-block__link {
+        &:hover {
+          color: $black--off;
+
+          .link-primary {
+            color: $black--off;
+          }
+        }
+      }
+    }
+
+    &:hover {
+      /* image scale */
+      .solution-tiles-block__image {
+        img {
+          transform: scale(1.5);
+        }
+
+        .solution-tiles-block__rippleimg {
+          transform: translateY(100%) scale(9.5);
+        }
+      }
+
+      /* link text slide + arrow */
+      .link-primary {
+        padding-left: 34px;
+
+        &::after {
+          left: 12px;
+        }
+      }
+    }
+
+    @include r(tablet-small) {
+      flex-flow: wrap;
+      padding: 15px 16px 16px;
+    }
+
+    &.no-image {
+      h4 {
+        width: 100%;
+        padding-left: 0;
+      }
+    }
+
+    .flickity-enabled & {
+      display: flex;
+      width: 410px;
+      height: initial;
+      min-height: 100%;
+      margin-right: 24px;
+
+      @include r(mobile) {
+        width: 100%;
+      }
+    }
+
+    h4 {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      margin-bottom: 8px;
+      font-family: $orkney;
+
+      @include r(tablet-small) {
+        width: calc(100% - 84px);
+        margin: auto;
+        padding-left: 15px;
+      }
+    }
+
+    p {
+      position: relative;
+      z-index: 1;
+      margin: 0 0 13px;
+
+      @include r(tablet-small) {
+        margin-top: 9px;
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 84px;
+    height: 80px;
+    margin-bottom: 40px;
+    margin-left: -6px;
+
+    @include r(tablet-small) {
+      margin-bottom: 22px;
+      margin-left: 0;
+    }
+
+    img {
+      display: block;
+      max-width: 40px;
+      margin: 0 auto;
+      transform: none;
+      transition: all $a-short ease-in-out;
+
+      &.solution-tiles-block__rippleimg {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__rippleimg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    max-width: 100%;
+    transform: none;
+    transition: all $a-short ease-in-out;
+  }
+
+  .link-primary {
+    position: relative;
+    z-index: 1;
+    margin-top: auto;
+    color: $white;
+
+    &::after {
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+
+  &__greytiles {
+    background: none;
+
+    .solution-tiles-block__heading {
+      @include r(tablet-small) {
+        text-align: left;
+      }
+
+      h2 {
+        max-width: 100%;
+      }
+    }
+
+    .solution-tiles-block__link {
+      padding-left: 50px;
+      padding-right: 50px;
+      color: $black--off;
+      background: $grey--light;
+
+      @include r(tablet-max) {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+
+      @include r(tablet-small) {
+        padding: 20px 16px;
+      }
+
+      h4 {
+        width: 100%;
+        padding: 0;
+      }
+    }
+
+    .solution-tiles-block__column {
+      padding-left: 50px;
+      padding-right: 50px;
+      color: $black--off;
+      background: $grey--light;
+
+      @include r(tablet-max) {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+
+      @include r(tablet-small) {
+        padding: 20px 16px;
+      }
+
+      h4 {
+        width: 100%;
+        padding: 0;
+      }
+
+      &:hover {
+        .solution-tiles-block__image {
+          img {
+            transform: scale(1.5);
+          }
+
+          .solution-tiles-block__rippleimg {
+            transform: translateY(100%) scale(9.5);
+          }
+        }
+
+        .solution-tiles-block__hoverbg {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    }
+
+    .link-primary {
+      color: $black--off;
+    }
+  }
+
+  &__hoverbg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scale(1.5);
+    transition: all $a-short ease-in-out;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}

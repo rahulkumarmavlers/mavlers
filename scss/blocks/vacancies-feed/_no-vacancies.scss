@@ -1,0 +1,33 @@
+.vacancies-feed__no-vacancies {
+  padding: 62px 0;
+  background-color: $grey--light;
+
+  .no-vacancies__content {
+    text-align: center;
+
+    .title {
+      margin-bottom: 35px;
+      color: $green;
+    }
+
+    .btn {
+      justify-content: center;
+      padding: 10px 30px;
+
+      &:hover { padding-left: 50px; }
+    }
+
+    .link {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+      text-decoration: none;
+    }
+
+    .description,
+    p {
+      font-size: 18px;
+      font-weight: $f-medium;
+    }
+  }
+}

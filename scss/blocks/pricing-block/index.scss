@@ -1,0 +1,105 @@
+@import "~styles/config";
+
+.pricing-block {
+  padding: 100px 0;
+
+  @include r(mobile) {
+    padding: 50px 0;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px 24px;
+    justify-content: center;
+  }
+}
+
+.pricing-tile {
+  flex: 0 0 calc((100% - 48px) / 3);
+  padding: 32px;
+  color: $white;
+  background-color: $green--dark;
+
+  @include r(tablet) {
+    flex: 0 0 calc((100% - 24px) / 2);
+  }
+
+  @include r(mobile) {
+    flex: 0 0 100%;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid $green;
+    margin-top: auto;
+    gap: 10px;
+    padding-top: 24px;
+  }
+
+  &__content {
+    margin-bottom: 10px;
+    padding-left: 5px;
+
+    a:not(.btn) {
+      text-decoration: underline;
+      color: $white;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    flex: 0 0 64px;
+    justify-content: center;
+    width: 64px;
+    height: 72px;
+    padding-top: 5px;
+    background-image: url("~img/icons/icon-bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    img {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  &__price {
+    span {
+      display: block;
+
+      &:first-child {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  &__title {
+    flex: 1;
+    margin: 0;
+  }
+
+  ul {
+    li {
+      margin-bottom: 5px;
+    }
+  }
+}

@@ -1,0 +1,165 @@
+@import "~styles/config";
+
+.four-feature-tiles-block {
+  position: relative;
+  padding: 110px 0;
+  background: $grey--light;
+
+  @include r(laptop-small) {
+    padding: 90px 0;
+  }
+
+  @include r(tablet-max) {
+    padding: 70px 0;
+  }
+
+  @include r(tablet-small) {
+    overflow: hidden;
+    padding: 40px 0;
+  }
+
+  &__heading {
+    text-align: center;
+
+    @include r(tablet-small) {
+      margin-bottom: 41px;
+      text-align: left;
+    }
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 30px;
+      color: $green;
+
+      @include r(tablet-max) {
+        margin-bottom: 20px;
+      }
+
+      @include r(tablet-small) {
+        max-width: 290px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &.dark-green-title {
+        color: $green--dark;
+      }
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -12px;
+
+    @include r(laptop-small) {
+      margin: 0 -10px;
+    }
+
+    @include r(tablet-small) {
+      position: relative;
+      z-index: 1;
+      display: block;
+      margin: 0;
+    }
+
+    &::after {
+      @include r(tablet-small) {
+        content: "";
+        position: absolute;
+        top: -1px;
+        bottom: -1px;
+        left: -30px;
+        width: 30px;
+        background: $grey--light;
+      }
+    }
+
+    .flickity-viewport {
+      width: 100%;
+
+      @include r(tablet-small) {
+        overflow: inherit;
+      }
+    }
+  }
+
+  &__column {
+    width: 25%;
+    margin-top: 60px;
+    padding: 0 12px;
+
+    @include r(laptop-small) {
+      margin-top: 50px;
+      padding: 0 10px;
+    }
+
+    @include r(tablet-max) {
+      width: 33.33%;
+      margin-top: 40px;
+    }
+
+    @include r(tablet-small) {
+      width: 64.5%;
+      margin-top: 0;
+      margin-right: 16px;
+      padding: 0;
+    }
+  }
+
+  &__img {
+    position: relative;
+    margin-bottom: 30px;
+    padding-bottom: 63%;
+
+    @include r(laptop-small) {
+      margin-bottom: 25px;
+    }
+
+    @include r(tablet-small) {
+      margin-bottom: 20px;
+      padding-bottom: 61%;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+
+  &__inner {
+    width: 100%;
+    height: 100%;
+
+    h5 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-family: $orkney;
+
+      @include r(tablet-max) {
+        margin-bottom: 5px;
+      }
+    }
+
+    p {
+      margin-top: 0;
+    }
+  }
+}

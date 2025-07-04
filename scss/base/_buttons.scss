@@ -1,0 +1,427 @@
+@use "sass:map";
+
+.btn {
+  $root: &;
+
+  @include btn-reset;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  max-width: 280px;
+  border-radius: 100px;
+  padding: 12px 30px 10px;
+  font-family: $kamerik;
+  font-size: 16px;
+  font-weight: $f-bold;
+  line-height: 24px;
+  text-align: left;
+  color: $black--off;
+  transition: padding $a-short;
+
+  //
+  // Primary button
+  //
+  &--primary {
+    background-color: $green;
+
+    &:hover {
+      padding-left: 50px;
+
+      &::before {
+        left: 24px;
+        opacity: 1;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 5px;
+      flex: 0 0 16px;
+      width: 16px;
+      height: 16px;
+      background-image: url("~img/icons/arrow-black.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      opacity: 0;
+      transform: translateY(-50%);
+      transition-property: left, opacity;
+      transition-duration: $a-short;
+    }
+  }
+
+  //
+  // Simple button w/ text and arrow
+  // Also see 'btn-revealing-arrow-style()' mixin
+  //
+  &--text-arrow {
+    $arrow-width: 16px;
+
+    max-width: none;
+    padding: 0 0 0 calc(12px + $arrow-width);
+    line-height: 1.3;
+    transition: padding-left $a-short;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: $arrow-width;
+      height: $arrow-width;
+      background-image: url("~img/icons/arrow-green.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      transition: left $a-short;
+    }
+
+    &.arrow-reveal {
+      padding-left: 0;
+
+      &::before {
+        left: - calc($arrow-width + 10px);
+        opacity: 0;
+        transition: opacity $a-short, left $a-short;
+      }
+    }
+
+    @include hover {
+      padding-left: calc(12px + 10px + $arrow-width);
+
+      &::before { left: $arrow-width; }
+
+      &.arrow-reveal {
+        padding-left: calc(12px + $arrow-width);
+
+        &::before {
+          left: 7px;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &--white-green {
+    border: 2px solid $green;
+    background-color: $white;
+  }
+
+  &--white-dark-green {
+    border: 2px solid $green--dark;
+    color: $black--off;
+    background-color: $white;
+
+    &::before {
+      background-image: url("~img/icons/arrow-green.svg");
+    }
+  }
+
+  &--dark-green {
+    border: 2px solid $white;
+    color: $white;
+    background-color: $green--dark;
+
+    &::before {
+      background-image: url("~img/icons/arrow-white.svg");
+    }
+  }
+
+  &--dark-green-arrow {
+    &::before {
+      background-image: url("~img/icons/arrow-dark-green.svg");
+    }
+  }
+
+  //
+  // "Previous" and "Next" buttons w/ "Pill" variation
+  // Example usage: search page > navigation buttons
+  //
+  &--previous,
+  &--next {
+    &.btn--pill {
+      border: 2px solid $green;
+      padding-top: 15px;
+      padding-bottom: 10px;
+
+      &[disabled] {
+        border-color: $black--off;
+        color: $black--off;
+        opacity: 0.3;
+        cursor: default;
+      }
+    }
+  }
+
+  //
+  // "Previous" button
+  //
+  &--previous {
+    $arrow-width: 16px;
+
+    max-width: none;
+    padding: 0 0 0 calc(12px + $arrow-width);
+    line-height: 1.3;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: $arrow-width;
+      height: $arrow-width;
+      background-image: url("~img/icons/arrow-green.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      transform: rotate(-180deg);
+    }
+
+    // "Pill" variation
+    &.btn--pill {
+      padding-left: calc(36px + $arrow-width);
+      padding-right: 24px;
+
+      &::before {
+        left: 24px;
+        background-image: url("~img/icons/arrow-black.svg");
+      }
+    }
+  }
+
+  //
+  // "Next" button
+  //
+  &--next {
+    $arrow-width: 16px;
+
+    max-width: none;
+    padding: 0 calc(12px + $arrow-width) 0 0;
+    line-height: 1.3;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      width: $arrow-width;
+      height: $arrow-width;
+      background-image: url("~img/icons/arrow-green.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    // "Pill" variation
+    &.btn--pill {
+      padding-left: 24px;
+      padding-right: calc(36px + $arrow-width);
+
+      &::after {
+        right: 24px;
+        background-image: url("~img/icons/arrow-black.svg");
+      }
+    }
+  }
+
+  //
+  // Cross button
+  //
+  &--cross {
+    display: flex;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 0;
+    padding: 0;
+    line-height: 1;
+  }
+
+  @include r(mobile) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+/* Find Out More Common Style */
+.link-primary {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 28px;
+  font-family: $kamerik;
+  font-weight: $f-bold;
+  text-decoration: none;
+  color: $black--off;
+  transition: all $a-short ease-in-out;
+
+  @include r(tablet-small) {
+    padding-left: 21px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background-image: url("~img/icons/arrow-green.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 16px;
+    transition: all $a-short ease-in-out;
+
+    @include r(tablet-small) {
+      top: 4px;
+      width: 13px;
+      height: 13px;
+      background-size: 13px;
+    }
+  }
+
+  &:hover {
+    padding-left: 34px;
+
+    &::after {
+      left: 12px;
+    }
+  }
+}
+
+/* Flickity Arrows and Dots Common Style */
+.flickity-enabled {
+  .flickity-prev-next-button {
+    top: 100%;
+    left: auto;
+    right: 0;
+    width: 48px;
+    height: 48px;
+    border: 2px solid $green;
+    margin-top: 45px;
+    background: transparent;
+    transform: none;
+
+    @include r(tablet-small) {
+      width: 40px;
+      height: 40px;
+      margin-top: 40px;
+    }
+
+    svg {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-image: url("~img/icons/slider-arrow-right.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 24px;
+      transition: all $a-short ease-in-out;
+
+      @include r(tablet-small) {
+        background-size: 20px;
+      }
+    }
+
+    &.previous {
+      left: auto;
+      right: 64px;
+
+      @include r(tablet-small) {
+        right: 50px;
+      }
+
+      &::after {
+        background-image: url("~img/icons/slider-arrow-left.svg");
+      }
+    }
+
+    &.next {
+      right: 0;
+    }
+
+    &:hover,
+    &:focus {
+      background: transparent;
+      box-shadow: none;
+      opacity: 1;
+
+      &.next {
+        &::after {
+          right: -8px;
+
+          @include r(tablet-small) {
+            right: 0;
+          }
+        }
+      }
+
+      &.previous {
+        &::after {
+          left: -8px;
+
+          @include r(tablet-small) {
+            left: 0;
+          }
+        }
+      }
+
+      &:active {
+        opacity: 1;
+      }
+    }
+
+    &:disabled {
+      display: none;
+    }
+  }
+
+  .flickity-page-dots {
+    position: static;
+    width: auto;
+    margin: 78px -4px 0;
+
+    @include r(tablet-max) {
+      margin-top: 60px;
+    }
+
+    @include r(tablet-small) {
+      width: calc(117% + 8px);
+      margin-top: 48px;
+    }
+
+    .flickity-page-dot,
+    .dot {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 48px;
+      height: 8px;
+      border-radius: 0;
+      margin: 0 4px;
+      background: $grey;
+      opacity: 1;
+
+      @include r(tablet-small) {
+        width: 41px;
+        height: 6px;
+      }
+
+      &.is-selected {
+        background: $green;
+      }
+
+      &:focus {
+        box-shadow: none;
+      }
+
+      &:only-child {
+        display: none;
+      }
+    }
+  }
+}

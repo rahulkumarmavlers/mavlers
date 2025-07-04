@@ -1,0 +1,137 @@
+@import "~styles/config";
+@import "~styles/components/form";
+
+.form-block {
+  position: relative;
+  padding: 175px 0 125px;
+  background-image: url("~img/form-bg.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: cover;
+
+  @include r(mobile, tablet) {
+    padding: 45px 0 80px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: linear-gradient(to top, white, transparent);
+
+    @include r(mobile, tablet) {
+      display: none;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: linear-gradient(to bottom, white, transparent);
+
+    @include r(mobile, tablet) {
+      display: none;
+    }
+  }
+
+  @include r(laptop) {
+    background-position: 40% center;
+  }
+
+  &--careers,
+  &--overlap {
+    margin-top: -190px;
+    background-image: url("~img/careers-form-bg.jpg");
+
+    @include r(mobile, tablet) {
+      margin-top: 0;
+      padding: 45px 0 80px;
+    }
+  }
+
+  &--careers {
+    padding: 350px 0 120px;
+  }
+
+  &--overlap {
+    padding: 150px 0 120px;
+  }
+
+  @include r(mobile, tablet) {
+    margin-top: 40px;
+    padding: 50px 0 80px;
+    background-color: $grey--light;
+    background-image: none;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 503px;
+    align-items: center;
+    gap: 150px;
+
+    @include r(tablet, mobile) {
+      grid-template-columns: 1fr;
+      gap: 50px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 20px;
+
+    @include r(mobile) {
+      margin-bottom: 20px;
+      font-size: 28px;
+      letter-spacing: -0.28px;
+      line-height: 36px;
+    }
+  }
+
+  &__text {
+    margin: 0 0 20px;
+    font-size: 18px;
+    font-weight: $f-medium;
+    line-height: 26px;
+
+    @include r(mobile) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &__form {
+    padding: 48px;
+    background-color: $white;
+    box-shadow: 0 0 48px 0 rgba($black, 0.1);
+
+    @include r(mobile) {
+      padding: 24px;
+    }
+
+    &-title {
+      margin: 0 0 20px;
+      color: $green;
+
+      @include r(mobile) {
+        margin-bottom: 20px;
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+
+    &--dark {
+      background-color: $green--dark;
+
+      .form-block__form-title {
+        color: $white;
+      }
+    }
+  }
+}

@@ -1,0 +1,213 @@
+// -----------------------------------------------------------------------------
+// GRAVITY FORM STYLES
+// Overrides specific to Gravity form elements.
+// Common form styles are located in /components/form/
+// -----------------------------------------------------------------------------
+
+.form-style {
+  // Legend for 'required' fields
+  .gform_required_legend {
+    display: none;
+  }
+
+  .gfield_description {
+    font-size: 14px;
+  }
+
+  .honeypot {
+    display: none;
+  }
+
+  //
+  // Fields
+  //
+  .gfield {
+    padding: 0 17px;
+
+    &--width-half {
+      display: inline-block;
+      vertical-align: top;
+      width: 50%;
+
+      @include r(tablet-small) {
+        width: 100%;
+      }
+    }
+
+    //
+    // Custom checkbox button & consent field
+    //
+    .gfield_checkbox,
+    .ginput_container_consent {
+      @include checkbox-field-custom-style;
+
+      .gchoice {
+        margin-bottom: 9px;
+      }
+    }
+
+    .ginput_container_fileupload {
+      @include file-upload-field-custom-style;
+
+      .gform_drop_instructions,
+      .gform_fileupload_rules {
+        display: block;
+        margin-top: 15px;
+        font-family: $orkney;
+        font-size: 14px;
+        line-height: 18px;
+        color: $black--off;
+      }
+
+      input[type="file"] {
+        display: inline-block;
+        width: 100%;
+        font-family: $orkney;
+        font-size: 14px;
+        line-height: 18px;
+        color: $black--off;
+
+        &::-webkit-file-upload-button {
+          padding: 0 10px 0 0;
+          font-family: $orkney;
+          font-size: 14px !important;
+          text-decoration: underline;
+          color: $black--off !important;
+          transition: color $a-short;
+          cursor: pointer;
+
+          &:hover {
+            color: $black;
+          }
+        }
+      }
+    }
+
+    .gform_fileupload_multifile {
+      @include multi-file-upload-field-custom-style;
+
+      border: 1px dashed $green;
+      border-radius: 4px;
+
+      // background-color: $green;
+
+      .gform_drop_instructions,
+      .gform_fileupload_rules {
+        display: inline-block;
+        font-family: $orkney;
+        font-size: 14px;
+        line-height: 18px;
+        color: $black;
+      }
+
+      .gform_fileupload_rules {
+        font-weight: $f-regular;
+      }
+    }
+
+    //
+    // Custom radio button
+    //
+    .gfield_radio {
+      @include radio-field-custom-style;
+
+      .gchoice {
+        margin-bottom: 9px;
+      }
+    }
+  }
+
+  .gfield_html {
+    font-size: 14px;
+    font-weight: $f-light;
+    font-style: italic;
+    line-height: 18px;
+    color: $black--off;
+  }
+
+  .hidden_label {
+    display: none;
+  }
+
+  //
+  // Submit button
+  //
+  .gform_footer {
+    margin-top: 32px;
+  }
+
+  .gform-body {
+    margin: 0 -15px;
+  }
+
+  //
+  // Validation feedback
+  //
+  .gform_validation_errors {
+    display: none;
+    margin-bottom: 10px;
+    padding: 13px 15px 9px;
+    text-align: center;
+    background: $white--off;
+
+    .gform_submission_error {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      color: $black--off;
+    }
+  }
+
+  //
+  // Form success message
+  //
+  .gform_confirmation_wrapper {
+    padding: 13px 15px 9px;
+    text-align: center;
+    background: $white--off;
+
+    .gform_confirmation_message {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      color: $black--off;
+    }
+  }
+
+  &--dark {
+    .gfield .gfield_checkbox label,
+    .gfield .ginput_container_consent label,
+    .gfield .gfield_radio label {
+      color: $white;
+
+      &::before {
+        border-color: $white;
+      }
+    }
+
+    .gfield .gfield_checkbox,
+    .gfield .ginput_container_consent {
+      input:checked + label::before {
+        background-color: $white;
+      }
+
+      label {
+        &::after {
+          background-image: url("~img/checked-dark.svg");
+        }
+      }
+    }
+
+    .gfield .gfield_radio label::after {
+      background-color: $white;
+    }
+  }
+}
+
+//
+// UI datepicker HMTL elements are rendered outside the form
+//
+.ui-datepicker {
+  @include datepicker-style;
+}

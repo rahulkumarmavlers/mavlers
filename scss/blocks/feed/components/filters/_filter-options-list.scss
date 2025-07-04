@@ -1,0 +1,61 @@
+.feed-filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 14px 20px;
+
+  .feed-filter-list__option {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    input {
+      @include visually-hidden-input-field;
+    }
+
+    label {
+      position: relative;
+      display: block;
+      border: 1px solid $green--dark;
+      border-radius: 30px;
+      padding: 12px 30px 8px !important;
+      font-size: 16px;
+      font-weight: $f-semibold;
+      line-height: 1.4;
+      cursor: pointer;
+      user-select: none;
+
+      &::after {
+        position: absolute;
+        top: 18px;
+        right: 20px;
+        display: inline-block;
+        width: 13px;
+        height: 11px;
+        background-image: url("~img/white-cross.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+    }
+
+    @include hover {
+      label {
+        border-color: $green--dark;
+        color: $white;
+        background-color: $green--dark;
+      }
+    }
+
+    input:checked + label {
+      border-color: $green--dark;
+      padding-right: 45px !important;
+      color: $white;
+      background-color: $green--dark;
+
+      &::after { content: ""; }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+// -----------------------------------------------------------------------------
+// CUSTOM SCROLLBAR - HORIZONTAL VARIATION
+// -----------------------------------------------------------------------------
+
+@import "common";
+
+//
+// Hides browser's scroll bar on scrollable content
+//
+div[data-cs-scrollable-direction="horizontal"] {
+  @include hide-scrollbar("horizontal");
+
+  // Prevents selecting any scrollable content when dragging the scroll bar
+  > * { user-select: none; }
+}
+
+.custom-scrollbar--horizontal {
+  position: relative;
+  width: auto;
+  height: 8px;
+  overflow: hidden;
+
+  .custom-scrollbar__bar {
+    position: relative;
+    width: 100px;
+    height: 100%;
+    background-color: rgba($black, 0.8);
+    cursor: pointer;
+  }
+}

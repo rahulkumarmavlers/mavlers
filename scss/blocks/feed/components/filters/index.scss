@@ -1,0 +1,32 @@
+@import "~styles/config";
+
+.feed-filters {
+  //
+  // Filter type: 'Tabs'
+  //
+  &--type-tabs {
+    position: relative;
+    z-index: 20;
+
+    //
+    // Mobile version helper class
+    // (makes top level filters component to occupy the whole screen)
+    //
+    &.show-mobile-filters-screen {
+      @include r(tablet, mobile) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99999;
+        width: 100%;
+        height: 100vh;
+        background-color: #fff;
+      }
+    }
+  }
+
+  //
+  // Filter type: 'Dropdown'
+  //
+  //&--type-dropdown {}
+}

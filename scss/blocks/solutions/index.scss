@@ -1,0 +1,207 @@
+@import "~styles/config";
+
+.solutions-block {
+  position: relative;
+  padding: 90px 0;
+
+  @include r(tablet-max) {
+    padding: 70px 0;
+  }
+
+  @include r(tablet-small) {
+    padding: 50px 0;
+  }
+
+  &__heading {
+    text-align: center;
+
+    @include r(tablet-small) {
+      text-align: left;
+    }
+
+    p {
+      margin-bottom: 12px;
+
+      @include r(tablet-small) {
+        margin-bottom: 5px;
+      }
+
+      span {
+        display: block;
+        font-size: 14px;
+        letter-spacing: 3.5px;
+        text-transform: uppercase;
+
+        @include r(laptop-small) {
+          font-size: 13px;
+        }
+
+        @include r(tablet-small) {
+          font-size: 12px;
+        }
+      }
+    }
+
+    h2 {
+      margin-top: 0;
+      color: $green;
+
+      &.dark-green-title {
+        color: $green--dark;
+      }
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 23px -15px 0;
+
+    @include r(tablet-max) {
+      margin: 0 -10px;
+    }
+
+    @include r(tablet-small) {
+      margin: 40px 0 0;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__row {
+    width: 50%;
+    margin-top: 55px;
+    padding: 0 15px;
+
+    @include r(tablet-max) {
+      padding: 0 10px;
+    }
+
+    @include r(tablet-small) {
+      width: 100%;
+      margin: 0 0 42px;
+      padding: 0;
+    }
+
+    &:last-child {
+      @include r(tablet-small) {
+        margin: 0;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+
+    &:hover {
+      .solutions-block__rippleimg {
+        path {
+          fill: $green--dark;
+        }
+      }
+
+      .solutions-block__img {
+        svg,
+        img {
+          transform: scale(1.2);
+        }
+      }
+
+      h5 {
+        color: $green--dark;
+      }
+
+      .link-primary {
+        padding-left: 34px;
+
+        &::after {
+          left: 12px;
+        }
+      }
+
+      .solutions-block__img svg path {
+        fill: $white;
+      }
+    }
+  }
+
+  &__icon {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 84px;
+    height: 90px;
+    margin: 3px 0 0;
+
+    @include r(tablet-small) {
+      width: 84px;
+      height: 94px;
+      margin: 0 0 12px;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      margin: 0 auto 12px;
+    }
+  }
+
+  &__rippleimg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+
+    path {
+      transition: all $a-short ease-in-out;
+    }
+  }
+
+  &__img {
+    svg,
+    img {
+      display: block;
+      max-width: 40px;
+      margin: 0 auto 12px;
+      transition: all $a-short ease-in-out;
+
+      path {
+        transition: all $a-short ease-in-out;
+      }
+    }
+  }
+
+  &__info {
+    width: calc(100% - 84px);
+    padding-left: 22px;
+
+    @include r(tablet-max) {
+      padding-left: 15px;
+    }
+
+    @include r(mobile) {
+      width: 100%;
+      padding-left: 0;
+    }
+
+    h5 {
+      max-width: 450px;
+      margin-bottom: 10px;
+      font-family: $orkney;
+      transition: color $a-short ease-in-out;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+  }
+}

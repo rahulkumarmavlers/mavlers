@@ -1,0 +1,15 @@
+@import "~styles/config";
+
+.vue-accordion {
+  position: relative;
+
+  &__trigger {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &__content {
+    position: relative;
+  }
+}

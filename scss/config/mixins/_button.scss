@@ -1,0 +1,59 @@
+//
+// Remove default styles from `<button>` elements.
+//
+// 1. Remove extra height from `<button>` elements in Firefox.
+//
+@mixin btn-reset {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  border: 0;
+  padding: 0;
+  font-size: inherit;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+  user-select: none;
+
+  * {
+    user-select: none;
+    cursor: pointer;
+  }
+
+  &::-moz-focus-inner {
+    border: 0; // [1]
+    padding: 0; // [1]
+  }
+}
+
+//
+// Button style with hover state where an arrow is revealed
+// and pushes the text to the right.
+// Similar to .btn--text-arrow class
+//
+@mixin btn-revealing-arrow-style($arrow-width: 16px) {
+  padding-left: 0;
+  transition: padding-left $a-short;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: - calc($arrow-width + 10px);
+    width: $arrow-width;
+    height: $arrow-width;
+    background-image: url("~img/icons/arrow-green.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0;
+    transition: opacity $a-short, left $a-short;
+  }
+
+  @include hover {
+    padding-left: calc(8px + $arrow-width);
+
+    &::before {
+      left: 0;
+      opacity: 1;
+    }
+  }
+}

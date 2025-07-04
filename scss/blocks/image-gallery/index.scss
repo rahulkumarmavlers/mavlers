@@ -1,0 +1,98 @@
+@import "~styles/config";
+
+.image-gallery-block {
+  position: relative;
+  padding: 85px 0 120px;
+  background: $grey--light;
+
+  @include r(laptop-small) {
+    padding: 85px 0 100px;
+  }
+
+  @include r(tablet-max) {
+    padding: 70px 0;
+  }
+
+  @include r(tablet-small) {
+    padding: 42px 0 47px;
+  }
+
+  h3 {
+    margin-bottom: 54px;
+    text-align: center;
+    color: $green;
+
+    &.dark-green-title {
+      color: $green--dark;
+    }
+
+    @include r(laptop-small) {
+      margin-bottom: 45px;
+    }
+
+    @include r(tablet-small) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__slider {
+    @include r(tablet-small) {
+      padding: 0 16px;
+      text-align: center;
+    }
+
+    .flickity-slider {
+      display: flex;
+    }
+
+    .flickity-prev-next-button {
+      display: none;
+
+      @include r(tablet-small) {
+        position: relative;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 50px 0 0;
+        transform: none;
+      }
+
+      &.previous {
+        @include r(tablet-small) {
+          right: 0;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  &__slidercol {
+    width: 45.5%;
+    margin-right: 96px;
+
+    @include r(laptop-small) {
+      width: 46%;
+      margin-right: 80px;
+    }
+
+    @include r(tablet-max) {
+      width: 48%;
+      margin-right: 50px;
+    }
+
+    @include r(tablet-small) {
+      width: 100%;
+      margin-right: 0;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

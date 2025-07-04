@@ -1,0 +1,112 @@
+@import "~styles/config";
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-bottom: 30px;
+
+  @include r(tablet-small) {
+    margin-bottom: 20px;
+  }
+
+  a,
+  span {
+    color: $white;
+  }
+
+  span {
+    &::after {
+      content: ">";
+      margin-left: 8px;
+      margin-right: 8px;
+
+      @include r(tablet-small) {
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+
+    &:first-child {
+      span {
+        &:first-child {
+          a {
+            display: inline-block;
+            vertical-align: top;
+            font-size: 0;
+            line-height: 1;
+
+            &::after {
+              content: "";
+              display: inline-block;
+              vertical-align: middle;
+              width: 14px;
+              height: 15px;
+              background-image: url("~img/home-icon.svg");
+              background-repeat: no-repeat;
+              background-size: 13px;
+
+              @include r(tablet-max) {
+                width: 11px;
+                height: 11px;
+                background-size: 11px;
+              }
+
+              @include r(mobile) {
+                width: 8px;
+                height: 8px;
+                background-size: 8px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    span {
+      display: inline-block;
+      vertical-align: top;
+      margin: 3px 0;
+      font-size: 14px;
+      line-height: 1.2;
+
+      &:last-child {
+        text-decoration: underline;
+      }
+
+      @include r(laptop-small) {
+        font-size: 13px;
+      }
+
+      @include r(mobile) {
+        font-size: 11px;
+      }
+    }
+  }
+
+  & > span {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 0;
+    line-height: 1;
+  }
+
+  &--dark {
+    a,
+    span {
+      color: $black--off;
+    }
+
+    span:first-child span:first-child a::after {
+      background-image: url("~img/home-icon-dark.svg");
+      background-repeat: no-repeat;
+    }
+  }
+}

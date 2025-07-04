@@ -1,0 +1,382 @@
+@import "~styles/config";
+
+.featured-post-block {
+  position: relative;
+  z-index: 1;
+  padding: 125px 0 115px;
+
+  @include r(laptop-small) {
+    padding: 100px 0;
+  }
+
+  @include r(tablet-max) {
+    padding: 70px 0;
+  }
+
+  @include r(tablet-small) {
+    padding: 50px 0;
+  }
+
+  &.less-padding {
+    padding-top: 45px;
+
+    @include r(tablet-small) {
+      padding-top: 50px;
+    }
+  }
+
+  // &__fullimg {
+  //   &::after {
+  //     content: "";
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     right: 0;
+  //     z-index: -1;
+  //     width: 100%;
+  //     height: 50%;
+  //     background: $grey--light;
+
+  //     @include r(tablet-small) {
+  //       display: none;
+  //     }
+  //   }
+  // }
+
+  &__overlap {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      width: 100%;
+      height: 50%;
+      background: $grey--light;
+
+      @include r(tablet-small) {
+        display: none;
+      }
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0 0 25px 5px;
+    list-style: none;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    li {
+      position: relative;
+      margin-bottom: 10px;
+      padding-left: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 9px;
+        left: 4px;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: $green;
+
+        @include r(tablet-max) {
+          top: 7px;
+        }
+      }
+
+      a {
+        display: inline-block;
+        vertical-align: top;
+        color: inherit;
+        transition: all $a-short ease-in-out;
+
+        &:hover {
+          color: $green;
+        }
+      }
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1052px;
+    margin: 0 auto;
+    text-decoration: none;
+    color: $white;
+    background: $green--dark;
+  }
+
+  &__img {
+    width: 38.5%;
+    min-height: 222px;
+
+    @include r(tablet-max) {
+      min-height: 200px;
+    }
+
+    @include r(tablet-small) {
+      width: 100%;
+      min-height: inherit;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 61.5%;
+    padding: 29px 34px 26px;
+
+    @include r(tablet-max) {
+      padding: 30px 26px;
+    }
+
+    @include r(tablet-small) {
+      width: 100%;
+      padding: 20px 22px;
+    }
+
+    p {
+      @include r(tablet-small) {
+        margin-bottom: 16px;
+      }
+
+      span {
+        display: block;
+        font-size: 14px;
+        letter-spacing: 3.5px;
+        line-height: 18px;
+        text-transform: uppercase;
+
+        @include r(tablet-small) {
+          font-size: 12px;
+          letter-spacing: 2.5px;
+          line-height: 16px;
+        }
+      }
+
+      a {
+        display: inline-block;
+        vertical-align: top;
+        color: inherit;
+        transition: all $a-short ease-in-out;
+
+        &:hover {
+          color: $green;
+        }
+      }
+    }
+
+    h5 {
+      margin-top: 0;
+      font-family: $orkney;
+    }
+
+    .link-primary {
+      margin-top: auto;
+      color: $white;
+    }
+  }
+
+  &__fullcontent {
+    max-width: 1052px;
+    margin: 0 auto 60px;
+
+    @include r(tablet-max) {
+      margin: 0 auto 40px;
+    }
+
+    @include r(tablet-small) {
+      margin: 0 auto 23px;
+    }
+
+    h3,
+    p {
+      font-family: $kamerik;
+      font-size: 36px;
+      font-weight: $f-bold;
+      line-height: 48px;
+      color: $green--dark;
+
+      @include r(laptop-small) {
+        font-size: 30px;
+        line-height: 40px;
+      }
+
+      @include r(tablet) {
+        font-size: 26px;
+        line-height: 34px;
+      }
+
+      @include r(mobile) {
+        font-size: 24px;
+        line-height: 32px;
+      }
+
+      a {
+        display: inline-block;
+        vertical-align: top;
+        color: inherit;
+        transition: all $a-short ease-in-out;
+
+        &:hover {
+          color: $green;
+        }
+      }
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1052px;
+    margin: 0 auto;
+
+    &.left-side {
+      .featured-post-block__left {
+        margin-left: auto;
+        padding-left: 50px;
+        padding-right: 0;
+
+        @include r(tablet-small) {
+          padding: 0;
+        }
+      }
+
+      .featured-post-block__right {
+        order: -1;
+        margin-left: 0;
+
+        @include r(tablet-small) {
+          order: inherit;
+        }
+      }
+    }
+  }
+
+  &__left {
+    width: 61.5%;
+    max-width: 580px;
+    padding-right: 50px;
+
+    @include r(tablet-max) {
+      width: 57%;
+      padding-right: 30px;
+    }
+
+    @include r(tablet-small) {
+      width: 100%;
+      max-width: none;
+      margin-bottom: 55px;
+      padding-right: 0;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 20px;
+
+      @include r(tablet-max) {
+        margin-bottom: 16px;
+      }
+
+      @include r(tablet-small) {
+        margin-bottom: 13px;
+      }
+
+      strong {
+        display: block;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 26px;
+
+        @include r(tablet-max) {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: $green;
+      }
+    }
+  }
+
+  &__right {
+    display: block;
+    width: 38.5%;
+    margin-left: auto;
+    text-decoration: none;
+
+    @include r(tablet-max) {
+      width: 43%;
+    }
+
+    @include r(tablet-small) {
+      width: 100%;
+    }
+
+    .featured-post-block__img {
+      position: relative;
+      width: 100%;
+      max-height: 250px;
+      min-height: 250px;
+
+      @include r(tablet-max) {
+        max-height: 220px;
+        min-height: 220px;
+      }
+
+      @include r(mobile) {
+        max-height: 192px;
+        min-height: 192px;
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    .featured-post-block__content {
+      width: 100%;
+      color: $white;
+      background: $green--dark;
+
+      h5 {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__two-column {
+    &.grey-bg {
+      background: $grey--light;
+    }
+
+    &.white-bg {
+      background: $white;
+    }
+  }
+}

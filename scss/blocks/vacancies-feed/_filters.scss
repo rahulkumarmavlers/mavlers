@@ -1,0 +1,60 @@
+@import "~styles/config";
+
+.vacancies-feed__filters {
+  @include r(laptop, desktop, ultrawide) {
+    position: sticky;
+    top: 0;
+    height: 50%;
+  }
+
+  .filter-list__items {
+    margin-bottom: 2rem;
+
+    h5 {
+      margin-bottom: 16px;
+      font-family: $orkney;
+    }
+  }
+}
+
+.vacancies-filters__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 12px;
+  padding-inline-start: 0;
+
+  li {
+    &:hover {
+      .category-item {
+        color: $white;
+        background-color: $green--dark;
+      }
+    }
+
+    .category-item {
+      display: flex;
+      border-radius: 20px;
+      padding: 4px 14px 1px;
+      font-family: $orkney;
+      font-size: 12px;
+      font-weight: $f-semibold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #231f20;
+      background-color: $grey--light;
+      transition: all ease-in 0.2s;
+      cursor: pointer;
+      gap: 10px;
+
+      &--categorySelected {
+        color: $white;
+        background-color: $green--dark;
+
+        .white-cross {
+          height: 9px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+// -----------------------------------------------------------------------------
+// HEADING ADVANCED
+// -----------------------------------------------------------------------------
+
+.heading-adv-wrapper {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  .heading-adv {
+    $font-weights-properties: (
+      "light",
+      "regular",
+      "medium",
+      "semibold",
+      "bold",
+      "heavy"
+    );
+    $font-weights-values: (
+      $f-light,
+      $f-regular,
+      $f-medium,
+      $f-semibold,
+      $f-bold,
+      $f-heavy
+    );
+
+    // Generates modifiers for different font-weights
+    @each $weight in $font-weights-properties {
+      $index: get-list-index($weight, $font-weights-properties);
+
+      &__weight--#{$weight} {
+        font-weight: get-list-value($index, $font-weights-values);
+      }
+    }
+
+    &__alignment--left { text-align: left; }
+
+    &__alignment--centre { text-align: center; }
+
+    &__alignment--right { text-align: right; }
+  }
+}

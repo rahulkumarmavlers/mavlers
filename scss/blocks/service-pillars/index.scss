@@ -1,0 +1,246 @@
+@import "~styles/config";
+
+.service-pillars-block {
+  position: relative;
+  padding: 79px 0 115px;
+
+  @include r(laptop-small) {
+    padding: 70px 0 100px;
+  }
+
+  @include r(tablet-max) {
+    padding: 70px 0;
+  }
+
+  @include r(tablet-small) {
+    padding: 43px 0;
+  }
+
+  &__heading {
+    max-width: 990px;
+    margin: 0 auto;
+    text-align: center;
+
+    @include r(laptop-small) {
+      max-width: 780px;
+    }
+
+    @include r(tablet-small) {
+      margin-bottom: 27px;
+    }
+
+    p {
+      margin-bottom: 5px;
+
+      span {
+        display: block;
+        font-size: 14px;
+        letter-spacing: 3.5px;
+        text-transform: uppercase;
+
+        @include r(laptop-small) {
+          font-size: 13px;
+        }
+
+        @include r(tablet-small) {
+          font-size: 12px;
+        }
+      }
+    }
+
+    h2 {
+      margin-top: 0;
+      color: $green;
+
+      span {
+        color: $black--off;
+      }
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -30px;
+
+    @include r(laptop-small) {
+      margin: 0 -25px;
+    }
+
+    @include r(tablet-small) {
+      margin: 0;
+    }
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 33.33%;
+    margin-top: 60px;
+    padding: 0 30px;
+    text-align: center;
+
+    @include r(laptop-small) {
+      padding: 0 25px;
+    }
+
+    @include r(tablet-small) {
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 60px;
+    }
+
+    @include r(tablet-small) {
+      padding: 0;
+    }
+
+    &:last-child {
+      @include r(tablet-small) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  a.service-pillars-block__inner {
+    &:hover {
+      h5 {
+        color: $green;
+      }
+
+      .service-pillars-block__img {
+        img {
+          transform: scale(1.185);
+        }
+
+        &::after {
+          transform: scale(0.894);
+        }
+      }
+
+      .link-primary {
+        padding-left: 34px;
+
+        &::after {
+          left: 12px;
+        }
+      }
+    }
+  }
+
+  &__img {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 212px;
+    margin-bottom: 44px;
+
+    @include r(laptop-small) {
+      margin-bottom: 35px;
+    }
+
+    @include r(tablet-max) {
+      margin-bottom: 30px;
+    }
+
+    @include r(tablet) {
+      min-height: 200px;
+    }
+
+    @include r(tablet-small) {
+      margin-bottom: 20px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      width: 150px;
+      height: 150px;
+      border-radius: 100%;
+      margin: auto;
+      background: $grey--light;
+      transition: all $a-short ease-in-out;
+    }
+
+    img {
+      display: block;
+      max-width: 149px;
+      margin: 0 auto;
+      transition: all $a-short ease-in-out;
+
+      @include r(tablet) {
+        max-width: 130px;
+        max-height: 150px;
+      }
+    }
+  }
+
+  &__content {
+    width: 100%;
+    margin-bottom: 36px;
+
+    @include r(laptop-small) {
+      margin-bottom: 30px;
+    }
+
+    @include r(tablet-max) {
+      margin-bottom: 25px;
+    }
+
+    @include r(tablet-small) {
+      margin-bottom: 12px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    h5 {
+      max-width: 237px;
+      margin: 0 auto 10px;
+      font-family: $orkney;
+      transition: all $a-short ease-in-out;
+
+      @include r(tablet-small) {
+        max-width: 100%;
+        margin-bottom: 4px;
+      }
+    }
+
+    p {
+      margin-top: 0;
+    }
+  }
+
+  &__link {
+    margin-top: auto;
+  }
+
+  &__greybg {
+    background: $grey--light;
+
+    .service-pillars-block__img::after {
+      background: $grey;
+    }
+  }
+}
