@@ -6,7 +6,7 @@ get_header(); ?>
 
 <!-- Banner Section Start -->
 <section class="banner-section inner-filter-banner ">
-    <div class="bg-media" style="background-image: url(https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/jobs-banner-bg.png)"></div>
+    <div class="bg-media"></div>
     <div class="container">
          <div class="banner-filter position-relative">
             
