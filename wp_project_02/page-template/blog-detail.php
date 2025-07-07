@@ -6,7 +6,7 @@ get_header(); ?>
 
 <!-- Banner Section Start -->
 <section class="banner-section narrow-banner has-overlay">
-    <div class="bg-media" style="background-image: url(https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/getty-images-_-zbpTrVZTo-unsplash-1-1-1.png)"></div>
+    <div class="bg-media" style="background-image: url(/getty-images-_-zbpTrVZTo-unsplash-1-1-1.png)"></div>
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-8 col-lg-6" data-aos="fade-up" data-aos-delay="50">
@@ -93,7 +93,7 @@ get_header(); ?>
             <div class="blog-item">
                 <div class="card-blog">
                     <div class="card-media">
-                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/home-blog-image-1.webp" alt="Blog Image">
+                        <img src="/home-blog-image-1.webp" alt="Blog Image">
                     </div>
                     <div class="card-body">
                         <div class="card-category">Lorem Ipsum</div>
@@ -105,7 +105,7 @@ get_header(); ?>
             <div class="blog-item">
                 <div class="card-blog">
                     <div class="card-media">
-                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/home-blog-image-2.webp" alt="Blog Image">
+                        <img src="/home-blog-image-2.webp" alt="Blog Image">
                     </div>
                     <div class="card-body">
                         <div class="card-category">Lorem Ipsum</div>
@@ -117,7 +117,7 @@ get_header(); ?>
             <div class="blog-item">
                 <div class="card-blog">
                     <div class="card-media">
-                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/home-blog-image-3.webp" alt="Blog Image">
+                        <img src="/home-blog-image-3.webp" alt="Blog Image">
                     </div>
                     <div class="card-body">
                         <div class="card-category">Lorem Ipsum</div>
@@ -129,7 +129,7 @@ get_header(); ?>
             <div class="blog-item">
                 <div class="card-blog">
                     <div class="card-media">
-                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/home-blog-image-4.webp" alt="Blog Image">
+                        <img src="/home-blog-image-4.webp" alt="Blog Image">
                     </div>
                     <div class="card-body">
                         <div class="card-category">Lorem Ipsum</div>
@@ -153,21 +153,21 @@ get_header(); ?>
         <div class="marquee">
             <div class="marquee-item">
                 <span class="marquee-text">Get In Touch</span>
-                <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/email-icon.svg" alt="">
+                <img src="/email-icon.svg" alt="">
             </div>
             <div class="marquee-item">
                 <span class="marquee-text">Get In Touch</span>
-                <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/email-icon.svg" alt="">
+                <img src="/email-icon.svg" alt="">
             </div>
         </div>
         <div class="marquee">
             <div class="marquee-item">
                 <span class="marquee-text">Get In Touch</span>
-                <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/email-icon.svg" alt="">
+                <img src="/email-icon.svg" alt="">
             </div>
             <div class="marquee-item">
                 <span class="marquee-text">Get In Touch</span>
-                <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/email-icon.svg" alt="">
+                <img src="/email-icon.svg" alt="">
             </div>
         </div>
     </div>

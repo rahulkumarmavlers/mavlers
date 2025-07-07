@@ -6,7 +6,7 @@ get_header(); ?>
 
 <!-- Banner Section Start -->
 <section class="banner-section narrow-banner has-overlay">
-    <div class="bg-media" style="background-image: url(https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/getty-images-_-zbpTrVZTo-unsplash-1-1-1.png)"></div>
+    <div class="bg-media" style="background-image: url(/getty-images-_-zbpTrVZTo-unsplash-1-1-1.png)"></div>
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-8 col-lg-6" data-aos="fade-up" data-aos-delay="50">
@@ -46,7 +46,7 @@ get_header(); ?>
             <div class="col-12 col-md-6 order-md-last image-wrap">
                 <div class="inner-wrap">
                     <!-- Placeholder for image -->
-                    <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/complience-image-content.png" alt="Healthcare Staffing">
+                    <img src="/complience-image-content.png" alt="Healthcare Staffing">
                 </div>
             </div>
             <div class="col-12 col-md-6 content-wrap">
@@ -109,21 +109,21 @@ get_header(); ?>
         <div class="marquee">
             <div class="marquee-item">
                 <span class="marquee-text">Get In Touch</span>
-                <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/email-icon.svg" alt="">
+                <img src="/email-icon.svg" alt="">
             </div>
             <div class="marquee-item">
                 <span class="marquee-text">Get In Touch</span>
-                <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/email-icon.svg" alt="">
+                <img src="/email-icon.svg" alt="">
             </div>
         </div>
         <div class="marquee">
             <div class="marquee-item">
                 <span class="marquee-text">Get In Touch</span>
-                <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/email-icon.svg" alt="">
+                <img src="/email-icon.svg" alt="">
             </div>
             <div class="marquee-item">
                 <span class="marquee-text">Get In Touch</span>
-                <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/email-icon.svg" alt="">
+                <img src="/email-icon.svg" alt="">
             </div>
         </div>
     </div>

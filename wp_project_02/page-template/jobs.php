@@ -6,7 +6,7 @@ get_header(); ?>
 
 <!-- Banner Section Start -->
 <section class="banner-section inner-filter-banner ">
-    <div class="bg-media" style="background-image: url(https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/jobs-banner-bg.png)"></div>
+    <div class="bg-media" style="background-image: url(/jobs-banner-bg.png)"></div>
     <div class="container">
          <div class="banner-filter position-relative">
             
@@ -135,23 +135,23 @@ get_header(); ?>
                                 <h3 class="job-title">Travel Nurse/Registered Nurse (RN) – MedSurg/Telemetry</h3>
                                 <ul class="job-info">
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-location-icon.svg" alt="">
+                                        <img src="/job-location-icon.svg" alt="">
                                         <span><strong>Location:</strong> Charlotte, North Carolina, USA</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Specialty-icon.svg" alt="">
+                                        <img src="/job-Specialty-icon.svg" alt="">
                                         <span><strong>Specialty:</strong> Health Care</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-type-icon.svg" alt="">
+                                        <img src="/job-type-icon.svg" alt="">
                                         <span><strong>Type:</strong> Contract</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Schedule-icon.svg" alt="">
+                                        <img src="/job-Schedule-icon.svg" alt="">
                                         <span><strong>Schedule:</strong> Lorem ipsum</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-time-icon.svg" alt="">
+                                        <img src="/job-time-icon.svg" alt="">
                                         <span><strong>Time:</strong> Lorem ipsum</span>
                                     </li>
                                 </ul>
@@ -170,23 +170,23 @@ get_header(); ?>
                                 <h3 class="job-title">Travel Nurse/Registered Nurse (RN) – MedSurg/Telemetry</h3>
                                 <ul class="job-info">
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-location-icon.svg" alt="">
+                                        <img src="/job-location-icon.svg" alt="">
                                         <span><strong>Location:</strong> Charlotte, North Carolina, USA</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Specialty-icon.svg" alt="">
+                                        <img src="/job-Specialty-icon.svg" alt="">
                                         <span><strong>Specialty:</strong> Health Care</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-type-icon.svg" alt="">
+                                        <img src="/job-type-icon.svg" alt="">
                                         <span><strong>Type:</strong> Contract</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Schedule-icon.svg" alt="">
+                                        <img src="/job-Schedule-icon.svg" alt="">
                                         <span><strong>Schedule:</strong> Lorem ipsum</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-time-icon.svg" alt="">
+                                        <img src="/job-time-icon.svg" alt="">
                                         <span><strong>Time:</strong> Lorem ipsum</span>
                                     </li>
                                 </ul>
@@ -205,23 +205,23 @@ get_header(); ?>
                                 <h3 class="job-title">Travel Nurse/Registered Nurse (RN) – MedSurg/Telemetry</h3>
                                 <ul class="job-info">
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-location-icon.svg" alt="">
+                                        <img src="/job-location-icon.svg" alt="">
                                         <span><strong>Location:</strong> Charlotte, North Carolina, USA</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Specialty-icon.svg" alt="">
+                                        <img src="/job-Specialty-icon.svg" alt="">
                                         <span><strong>Specialty:</strong> Health Care</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-type-icon.svg" alt="">
+                                        <img src="/job-type-icon.svg" alt="">
                                         <span><strong>Type:</strong> Contract</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Schedule-icon.svg" alt="">
+                                        <img src="/job-Schedule-icon.svg" alt="">
                                         <span><strong>Schedule:</strong> Lorem ipsum</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-time-icon.svg" alt="">
+                                        <img src="/job-time-icon.svg" alt="">
                                         <span><strong>Time:</strong> Lorem ipsum</span>
                                     </li>
                                 </ul>
@@ -240,23 +240,23 @@ get_header(); ?>
                                 <h3 class="job-title">Travel Nurse/Registered Nurse (RN) – MedSurg/Telemetry</h3>
                                 <ul class="job-info">
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-location-icon.svg" alt="">
+                                        <img src="/job-location-icon.svg" alt="">
                                         <span><strong>Location:</strong> Charlotte, North Carolina, USA</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Specialty-icon.svg" alt="">
+                                        <img src="/job-Specialty-icon.svg" alt="">
                                         <span><strong>Specialty:</strong> Health Care</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-type-icon.svg" alt="">
+                                        <img src="/job-type-icon.svg" alt="">
                                         <span><strong>Type:</strong> Contract</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Schedule-icon.svg" alt="">
+                                        <img src="/job-Schedule-icon.svg" alt="">
                                         <span><strong>Schedule:</strong> Lorem ipsum</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-time-icon.svg" alt="">
+                                        <img src="/job-time-icon.svg" alt="">
                                         <span><strong>Time:</strong> Lorem ipsum</span>
                                     </li>
                                 </ul>
@@ -275,23 +275,23 @@ get_header(); ?>
                                 <h3 class="job-title">Travel Nurse/Registered Nurse (RN) – MedSurg/Telemetry</h3>
                                 <ul class="job-info">
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-location-icon.svg" alt="">
+                                        <img src="/job-location-icon.svg" alt="">
                                         <span><strong>Location:</strong> Charlotte, North Carolina, USA</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Specialty-icon.svg" alt="">
+                                        <img src="/job-Specialty-icon.svg" alt="">
                                         <span><strong>Specialty:</strong> Health Care</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-type-icon.svg" alt="">
+                                        <img src="/job-type-icon.svg" alt="">
                                         <span><strong>Type:</strong> Contract</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Schedule-icon.svg" alt="">
+                                        <img src="/job-Schedule-icon.svg" alt="">
                                         <span><strong>Schedule:</strong> Lorem ipsum</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-time-icon.svg" alt="">
+                                        <img src="/job-time-icon.svg" alt="">
                                         <span><strong>Time:</strong> Lorem ipsum</span>
                                     </li>
                                 </ul>
@@ -310,23 +310,23 @@ get_header(); ?>
                                 <h3 class="job-title">Travel Nurse/Registered Nurse (RN) – MedSurg/Telemetry</h3>
                                 <ul class="job-info">
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-location-icon.svg" alt="">
+                                        <img src="/job-location-icon.svg" alt="">
                                         <span><strong>Location:</strong> Charlotte, North Carolina, USA</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Specialty-icon.svg" alt="">
+                                        <img src="/job-Specialty-icon.svg" alt="">
                                         <span><strong>Specialty:</strong> Health Care</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-type-icon.svg" alt="">
+                                        <img src="/job-type-icon.svg" alt="">
                                         <span><strong>Type:</strong> Contract</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Schedule-icon.svg" alt="">
+                                        <img src="/job-Schedule-icon.svg" alt="">
                                         <span><strong>Schedule:</strong> Lorem ipsum</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-time-icon.svg" alt="">
+                                        <img src="/job-time-icon.svg" alt="">
                                         <span><strong>Time:</strong> Lorem ipsum</span>
                                     </li>
                                 </ul>
@@ -345,23 +345,23 @@ get_header(); ?>
                                 <h3 class="job-title">Travel Nurse/Registered Nurse (RN) – MedSurg/Telemetry</h3>
                                 <ul class="job-info">
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-location-icon.svg" alt="">
+                                        <img src="/job-location-icon.svg" alt="">
                                         <span><strong>Location:</strong> Charlotte, North Carolina, USA</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Specialty-icon.svg" alt="">
+                                        <img src="/job-Specialty-icon.svg" alt="">
                                         <span><strong>Specialty:</strong> Health Care</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-type-icon.svg" alt="">
+                                        <img src="/job-type-icon.svg" alt="">
                                         <span><strong>Type:</strong> Contract</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Schedule-icon.svg" alt="">
+                                        <img src="/job-Schedule-icon.svg" alt="">
                                         <span><strong>Schedule:</strong> Lorem ipsum</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-time-icon.svg" alt="">
+                                        <img src="/job-time-icon.svg" alt="">
                                         <span><strong>Time:</strong> Lorem ipsum</span>
                                     </li>
                                 </ul>
@@ -380,23 +380,23 @@ get_header(); ?>
                                 <h3 class="job-title">Travel Nurse/Registered Nurse (RN) – MedSurg/Telemetry</h3>
                                 <ul class="job-info">
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-location-icon.svg" alt="">
+                                        <img src="/job-location-icon.svg" alt="">
                                         <span><strong>Location:</strong> Charlotte, North Carolina, USA</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Specialty-icon.svg" alt="">
+                                        <img src="/job-Specialty-icon.svg" alt="">
                                         <span><strong>Specialty:</strong> Health Care</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-type-icon.svg" alt="">
+                                        <img src="/job-type-icon.svg" alt="">
                                         <span><strong>Type:</strong> Contract</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Schedule-icon.svg" alt="">
+                                        <img src="/job-Schedule-icon.svg" alt="">
                                         <span><strong>Schedule:</strong> Lorem ipsum</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-time-icon.svg" alt="">
+                                        <img src="/job-time-icon.svg" alt="">
                                         <span><strong>Time:</strong> Lorem ipsum</span>
                                     </li>
                                 </ul>
@@ -415,23 +415,23 @@ get_header(); ?>
                                 <h3 class="job-title">Travel Nurse/Registered Nurse (RN) – MedSurg/Telemetry</h3>
                                 <ul class="job-info">
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-location-icon.svg" alt="">
+                                        <img src="/job-location-icon.svg" alt="">
                                         <span><strong>Location:</strong> Charlotte, North Carolina, USA</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Specialty-icon.svg" alt="">
+                                        <img src="/job-Specialty-icon.svg" alt="">
                                         <span><strong>Specialty:</strong> Health Care</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-type-icon.svg" alt="">
+                                        <img src="/job-type-icon.svg" alt="">
                                         <span><strong>Type:</strong> Contract</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Schedule-icon.svg" alt="">
+                                        <img src="/job-Schedule-icon.svg" alt="">
                                         <span><strong>Schedule:</strong> Lorem ipsum</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-time-icon.svg" alt="">
+                                        <img src="/job-time-icon.svg" alt="">
                                         <span><strong>Time:</strong> Lorem ipsum</span>
                                     </li>
                                 </ul>
@@ -450,23 +450,23 @@ get_header(); ?>
                                 <h3 class="job-title">Travel Nurse/Registered Nurse (RN) – MedSurg/Telemetry</h3>
                                 <ul class="job-info">
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-location-icon.svg" alt="">
+                                        <img src="/job-location-icon.svg" alt="">
                                         <span><strong>Location:</strong> Charlotte, North Carolina, USA</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Specialty-icon.svg" alt="">
+                                        <img src="/job-Specialty-icon.svg" alt="">
                                         <span><strong>Specialty:</strong> Health Care</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-type-icon.svg" alt="">
+                                        <img src="/job-type-icon.svg" alt="">
                                         <span><strong>Type:</strong> Contract</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Schedule-icon.svg" alt="">
+                                        <img src="/job-Schedule-icon.svg" alt="">
                                         <span><strong>Schedule:</strong> Lorem ipsum</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-time-icon.svg" alt="">
+                                        <img src="/job-time-icon.svg" alt="">
                                         <span><strong>Time:</strong> Lorem ipsum</span>
                                     </li>
                                 </ul>
@@ -485,23 +485,23 @@ get_header(); ?>
                                 <h3 class="job-title">Travel Nurse/Registered Nurse (RN) – MedSurg/Telemetry</h3>
                                 <ul class="job-info">
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-location-icon.svg" alt="">
+                                        <img src="/job-location-icon.svg" alt="">
                                         <span><strong>Location:</strong> Charlotte, North Carolina, USA</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Specialty-icon.svg" alt="">
+                                        <img src="/job-Specialty-icon.svg" alt="">
                                         <span><strong>Specialty:</strong> Health Care</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-type-icon.svg" alt="">
+                                        <img src="/job-type-icon.svg" alt="">
                                         <span><strong>Type:</strong> Contract</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Schedule-icon.svg" alt="">
+                                        <img src="/job-Schedule-icon.svg" alt="">
                                         <span><strong>Schedule:</strong> Lorem ipsum</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-time-icon.svg" alt="">
+                                        <img src="/job-time-icon.svg" alt="">
                                         <span><strong>Time:</strong> Lorem ipsum</span>
                                     </li>
                                 </ul>
@@ -520,23 +520,23 @@ get_header(); ?>
                                 <h3 class="job-title">Travel Nurse/Registered Nurse (RN) – MedSurg/Telemetry</h3>
                                 <ul class="job-info">
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-location-icon.svg" alt="">
+                                        <img src="/job-location-icon.svg" alt="">
                                         <span><strong>Location:</strong> Charlotte, North Carolina, USA</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Specialty-icon.svg" alt="">
+                                        <img src="/job-Specialty-icon.svg" alt="">
                                         <span><strong>Specialty:</strong> Health Care</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-type-icon.svg" alt="">
+                                        <img src="/job-type-icon.svg" alt="">
                                         <span><strong>Type:</strong> Contract</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Schedule-icon.svg" alt="">
+                                        <img src="/job-Schedule-icon.svg" alt="">
                                         <span><strong>Schedule:</strong> Lorem ipsum</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-time-icon.svg" alt="">
+                                        <img src="/job-time-icon.svg" alt="">
                                         <span><strong>Time:</strong> Lorem ipsum</span>
                                     </li>
                                 </ul>
@@ -555,23 +555,23 @@ get_header(); ?>
                                 <h3 class="job-title">Travel Nurse/Registered Nurse (RN) – MedSurg/Telemetry</h3>
                                 <ul class="job-info">
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-location-icon.svg" alt="">
+                                        <img src="/job-location-icon.svg" alt="">
                                         <span><strong>Location:</strong> Charlotte, North Carolina, USA</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Specialty-icon.svg" alt="">
+                                        <img src="/job-Specialty-icon.svg" alt="">
                                         <span><strong>Specialty:</strong> Health Care</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-type-icon.svg" alt="">
+                                        <img src="/job-type-icon.svg" alt="">
                                         <span><strong>Type:</strong> Contract</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Schedule-icon.svg" alt="">
+                                        <img src="/job-Schedule-icon.svg" alt="">
                                         <span><strong>Schedule:</strong> Lorem ipsum</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-time-icon.svg" alt="">
+                                        <img src="/job-time-icon.svg" alt="">
                                         <span><strong>Time:</strong> Lorem ipsum</span>
                                     </li>
                                 </ul>
@@ -590,23 +590,23 @@ get_header(); ?>
                                 <h3 class="job-title">Travel Nurse/Registered Nurse (RN) – MedSurg/Telemetry</h3>
                                 <ul class="job-info">
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-location-icon.svg" alt="">
+                                        <img src="/job-location-icon.svg" alt="">
                                         <span><strong>Location:</strong> Charlotte, North Carolina, USA</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Specialty-icon.svg" alt="">
+                                        <img src="/job-Specialty-icon.svg" alt="">
                                         <span><strong>Specialty:</strong> Health Care</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-type-icon.svg" alt="">
+                                        <img src="/job-type-icon.svg" alt="">
                                         <span><strong>Type:</strong> Contract</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Schedule-icon.svg" alt="">
+                                        <img src="/job-Schedule-icon.svg" alt="">
                                         <span><strong>Schedule:</strong> Lorem ipsum</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-time-icon.svg" alt="">
+                                        <img src="/job-time-icon.svg" alt="">
                                         <span><strong>Time:</strong> Lorem ipsum</span>
                                     </li>
                                 </ul>
@@ -625,23 +625,23 @@ get_header(); ?>
                                 <h3 class="job-title">Travel Nurse/Registered Nurse (RN) – MedSurg/Telemetry</h3>
                                 <ul class="job-info">
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-location-icon.svg" alt="">
+                                        <img src="/job-location-icon.svg" alt="">
                                         <span><strong>Location:</strong> Charlotte, North Carolina, USA</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Specialty-icon.svg" alt="">
+                                        <img src="/job-Specialty-icon.svg" alt="">
                                         <span><strong>Specialty:</strong> Health Care</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-type-icon.svg" alt="">
+                                        <img src="/job-type-icon.svg" alt="">
                                         <span><strong>Type:</strong> Contract</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Schedule-icon.svg" alt="">
+                                        <img src="/job-Schedule-icon.svg" alt="">
                                         <span><strong>Schedule:</strong> Lorem ipsum</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-time-icon.svg" alt="">
+                                        <img src="/job-time-icon.svg" alt="">
                                         <span><strong>Time:</strong> Lorem ipsum</span>
                                     </li>
                                 </ul>
@@ -660,23 +660,23 @@ get_header(); ?>
                                 <h3 class="job-title">Travel Nurse/Registered Nurse (RN) – MedSurg/Telemetry</h3>
                                 <ul class="job-info">
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-location-icon.svg" alt="">
+                                        <img src="/job-location-icon.svg" alt="">
                                         <span><strong>Location:</strong> Charlotte, North Carolina, USA</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Specialty-icon.svg" alt="">
+                                        <img src="/job-Specialty-icon.svg" alt="">
                                         <span><strong>Specialty:</strong> Health Care</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-type-icon.svg" alt="">
+                                        <img src="/job-type-icon.svg" alt="">
                                         <span><strong>Type:</strong> Contract</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Schedule-icon.svg" alt="">
+                                        <img src="/job-Schedule-icon.svg" alt="">
                                         <span><strong>Schedule:</strong> Lorem ipsum</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-time-icon.svg" alt="">
+                                        <img src="/job-time-icon.svg" alt="">
                                         <span><strong>Time:</strong> Lorem ipsum</span>
                                     </li>
                                 </ul>
@@ -695,23 +695,23 @@ get_header(); ?>
                                 <h3 class="job-title">Travel Nurse/Registered Nurse (RN) – MedSurg/Telemetry</h3>
                                 <ul class="job-info">
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-location-icon.svg" alt="">
+                                        <img src="/job-location-icon.svg" alt="">
                                         <span><strong>Location:</strong> Charlotte, North Carolina, USA</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Specialty-icon.svg" alt="">
+                                        <img src="/job-Specialty-icon.svg" alt="">
                                         <span><strong>Specialty:</strong> Health Care</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-type-icon.svg" alt="">
+                                        <img src="/job-type-icon.svg" alt="">
                                         <span><strong>Type:</strong> Contract</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Schedule-icon.svg" alt="">
+                                        <img src="/job-Schedule-icon.svg" alt="">
                                         <span><strong>Schedule:</strong> Lorem ipsum</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-time-icon.svg" alt="">
+                                        <img src="/job-time-icon.svg" alt="">
                                         <span><strong>Time:</strong> Lorem ipsum</span>
                                     </li>
                                 </ul>
@@ -730,23 +730,23 @@ get_header(); ?>
                                 <h3 class="job-title">Travel Nurse/Registered Nurse (RN) – MedSurg/Telemetry</h3>
                                 <ul class="job-info">
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-location-icon.svg" alt="">
+                                        <img src="/job-location-icon.svg" alt="">
                                         <span><strong>Location:</strong> Charlotte, North Carolina, USA</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Specialty-icon.svg" alt="">
+                                        <img src="/job-Specialty-icon.svg" alt="">
                                         <span><strong>Specialty:</strong> Health Care</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-type-icon.svg" alt="">
+                                        <img src="/job-type-icon.svg" alt="">
                                         <span><strong>Type:</strong> Contract</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Schedule-icon.svg" alt="">
+                                        <img src="/job-Schedule-icon.svg" alt="">
                                         <span><strong>Schedule:</strong> Lorem ipsum</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-time-icon.svg" alt="">
+                                        <img src="/job-time-icon.svg" alt="">
                                         <span><strong>Time:</strong> Lorem ipsum</span>
                                     </li>
                                 </ul>
@@ -765,23 +765,23 @@ get_header(); ?>
                                 <h3 class="job-title">Travel Nurse/Registered Nurse (RN) – MedSurg/Telemetry</h3>
                                 <ul class="job-info">
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-location-icon.svg" alt="">
+                                        <img src="/job-location-icon.svg" alt="">
                                         <span><strong>Location:</strong> Charlotte, North Carolina, USA</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Specialty-icon.svg" alt="">
+                                        <img src="/job-Specialty-icon.svg" alt="">
                                         <span><strong>Specialty:</strong> Health Care</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-type-icon.svg" alt="">
+                                        <img src="/job-type-icon.svg" alt="">
                                         <span><strong>Type:</strong> Contract</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Schedule-icon.svg" alt="">
+                                        <img src="/job-Schedule-icon.svg" alt="">
                                         <span><strong>Schedule:</strong> Lorem ipsum</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-time-icon.svg" alt="">
+                                        <img src="/job-time-icon.svg" alt="">
                                         <span><strong>Time:</strong> Lorem ipsum</span>
                                     </li>
                                 </ul>
@@ -800,23 +800,23 @@ get_header(); ?>
                                 <h3 class="job-title">Travel Nurse/Registered Nurse (RN) – MedSurg/Telemetry</h3>
                                 <ul class="job-info">
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-location-icon.svg" alt="">
+                                        <img src="/job-location-icon.svg" alt="">
                                         <span><strong>Location:</strong> Charlotte, North Carolina, USA</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Specialty-icon.svg" alt="">
+                                        <img src="/job-Specialty-icon.svg" alt="">
                                         <span><strong>Specialty:</strong> Health Care</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-type-icon.svg" alt="">
+                                        <img src="/job-type-icon.svg" alt="">
                                         <span><strong>Type:</strong> Contract</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Schedule-icon.svg" alt="">
+                                        <img src="/job-Schedule-icon.svg" alt="">
                                         <span><strong>Schedule:</strong> Lorem ipsum</span>
                                     </li>
                                     <li>
-                                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-time-icon.svg" alt="">
+                                        <img src="/job-time-icon.svg" alt="">
                                         <span><strong>Time:</strong> Lorem ipsum</span>
                                     </li>
                                 </ul>

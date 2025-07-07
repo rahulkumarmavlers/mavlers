@@ -1,5 +1,5 @@
 <section class="banner-section position-relative filter-banner has-overlay">
-    <div class="bg-media" style="background-image: url(https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/getty-images-_-zbpTrVZTo-unsplash.webp)"></div>
+    <div class="bg-media" style="background-image: url(/getty-images-_-zbpTrVZTo-unsplash.webp)"></div>
     <div class="container">
         <div class="col-12">
             
@@ -18,22 +18,22 @@
                     <div class="col-12 col-lg-6 banner-filter-images">
                         <div>
                             <a href="#">
-                                <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/vivan-review.png" alt="">
+                                <img src="/vivan-review.png" alt="">
                             </a>
                         </div>
                         <div>
                             <a href="#">
-                                <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/google-review-1.png" alt="">
+                                <img src="/google-review-1.png" alt="">
                             </a>
                         </div>
                         <div>
                             <a href="#">
-                                <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/indeed-review.png" alt="">
+                                <img src="/indeed-review.png" alt="">
                             </a>
                         </div>
                         <div>
                             <a href="#">
-                                <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/winner-2024.svg" alt="">
+                                <img src="/winner-2024.svg" alt="">
                             </a>
                         </div>
                     </div>

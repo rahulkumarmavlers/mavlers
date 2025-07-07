@@ -5,7 +5,7 @@
 get_header(); ?>
 <section class="banner-form-section">
     <div class="banner-section narrow-banner has-overlay">
-        <div class="bg-media" style="background-image: url(https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/getty-images-_-zbpTrVZTo-unsplash-2-1.png)"></div>
+        <div class="bg-media" style="background-image: url(/getty-images-_-zbpTrVZTo-unsplash-2-1.png)"></div>
         <div class="container">
             <div class="row justify-content-center text-center">
                 <div class="col-12 col-md-8" data-aos="fade-up" data-aos-delay="50">
@@ -61,10 +61,10 @@ get_header(); ?>
       <div class="col-12 col-lg-6">
         <div class="image-grid-4">
           <div class="img-item img-1">
-            <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/chris-leipelt-44Q19JsipxI-unsplash-2.png" alt="Utah Sign">
+            <img src="/chris-leipelt-44Q19JsipxI-unsplash-2.png" alt="Utah Sign">
           </div>
           <div class="img-item img-2">
-            <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/Group-1433-1.png" alt="Smiling Woman">
+            <img src="/Group-1433-1.png" alt="Smiling Woman">
             <div class="img-overlay-card">
               <span>
                 <svg width="22" height="22" viewBox="0 0 22 22" style="vertical-align:middle;margin-right:8px;"><rect width="22" height="22" rx="6" fill="#F3F1FE"/><path d="M6 8h10v6a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V8zm10-2a2 2 0 0 1 2 2v.217l-8 4.8-8-4.8V8a2 2 0 0 1 2-2h12z" fill="#3d4ed7"/></svg>
@@ -73,10 +73,10 @@ get_header(); ?>
             </div>
           </div>
           <div class="img-item img-3">
-            <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/chris-leipelt-44Q19JsipxI-unsplash-3.png" alt="Hollywood Sign">
+            <img src="/chris-leipelt-44Q19JsipxI-unsplash-3.png" alt="Hollywood Sign">
           </div>
           <div class="img-item img-4">
-            <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/chris-leipelt-44Q19JsipxI-unsplash-1.png" alt="US Flag">
+            <img src="/chris-leipelt-44Q19JsipxI-unsplash-1.png" alt="US Flag">
           </div>
         </div>
       </div>
@@ -106,7 +106,7 @@ get_header(); ?>
             <div class="goals-item">
                 <div class="card-core-goals">
                     <div class="card-image">
-                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/Value.svg" alt="">
+                        <img src="/Value.svg" alt="">
                     </div>
                     <div class="card-content">
                         <div class="number">01</div>
@@ -118,7 +118,7 @@ get_header(); ?>
             <div class="goals-item">
                 <div class="card-core-goals">
                     <div class="card-image">
-                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/Speed.svg" alt="">
+                        <img src="/Speed.svg" alt="">
                     </div>
                     <div class="card-content">
                         <div class="number">02</div>
@@ -130,7 +130,7 @@ get_header(); ?>
             <div class="goals-item">
                 <div class="card-core-goals">
                     <div class="card-image">
-                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/Support.svg" alt="">
+                        <img src="/Support.svg" alt="">
                     </div>
                     <div class="card-content">
                         <div class="number">03</div>
@@ -142,7 +142,7 @@ get_header(); ?>
             <div class="goals-item">
                 <div class="card-core-goals">
                     <div class="card-image">
-                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/Speed.svg" alt="">
+                        <img src="/Speed.svg" alt="">
                     </div>
                     <div class="card-content">
                         <div class="number">04</div>
@@ -163,7 +163,7 @@ get_header(); ?>
             <div class="col-lg-6 col-md-6 col-sm-12 how-works-left-col">
                 <div class="inner-how-works-col animated fadeInUp" data-class="fadeInUp">
                     <div class="how-works-img">
-                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/how-it-work-left-image.webp" alt="">
+                        <img src="/how-it-work-left-image.webp" alt="">
                     </div>
                 </div>
             </div>
@@ -296,7 +296,7 @@ get_header(); ?>
 
 
 <section class="form-section space-y">
-    <div class="bg-media" style="background-image: url('https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/Recruiters-bg-image-scaled.png')"></div>
+    <div class="bg-media" style="background-image: url('/Recruiters-bg-image-scaled.png')"></div>
     <div class="container">
         
         <div class="row form-wrap">

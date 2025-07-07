@@ -6,7 +6,7 @@ get_header(); ?>
 
 <!-- Banner Section Start -->
 <section class="banner-section position-relative filter-banner has-overlay">
-    <div class="bg-media" style="background-image: url(https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/getty-images-_-zbpTrVZTo-unsplash.webp)"></div>
+    <div class="bg-media" style="background-image: url(/getty-images-_-zbpTrVZTo-unsplash.webp)"></div>
     <div class="container">
         <div class="col-12">
             <div class="content-wrap text-center">
@@ -22,22 +22,22 @@ get_header(); ?>
                     <div class="col-12 col-md-6 banner-filter-images">
                         <div>
                             <a href="#">
-                                <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/vivan-review.png" alt="">
+                                <img src="/vivan-review.png" alt="">
                             </a>
                         </div>
                         <div>
                             <a href="#">
-                                <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/google-review-1.png" alt="">
+                                <img src="/google-review-1.png" alt="">
                             </a>
                         </div>
                         <div>
                             <a href="#">
-                                <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/indeed-review.png" alt="">
+                                <img src="/indeed-review.png" alt="">
                             </a>
                         </div>
                         <div>
                             <a href="#">
-                                <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/winner-2024.svg" alt="">
+                                <img src="/winner-2024.svg" alt="">
                             </a>
                         </div>
                     </div>
@@ -110,7 +110,7 @@ get_header(); ?>
         </div>
         <div class="popular-jobs-slider" data-aos="fade-up" data-aos-delay="100">
             <div class="popular-jobs-item">
-                <div class="card-popular-job" style="background-image: url('https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/Popular-Jobs-1.webp');">
+                <div class="card-popular-job" style="background-image: url('/Popular-Jobs-1.webp');">
                     <div class="card-content">
                         <h3>Travel Nursing</h3>
                         <ul>
@@ -123,7 +123,7 @@ get_header(); ?>
                 </div>
             </div>
             <div class="popular-jobs-item">
-                <div class="card-popular-job" style="background-image: url('https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/Popular-Jobs-2.webp');">
+                <div class="card-popular-job" style="background-image: url('/Popular-Jobs-2.webp');">
                     <div class="card-content">
                         <h3>Allied Health</h3>
                         <ul>
@@ -136,7 +136,7 @@ get_header(); ?>
                 </div>
             </div>
             <div class="popular-jobs-item">
-                <div class="card-popular-job" style="background-image: url('https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/Popular-Jobs-3.webp');">
+                <div class="card-popular-job" style="background-image: url('/Popular-Jobs-3.webp');">
                     <div class="card-content">
                         <h3>Non-Clinical</h3>
                         <ul>
@@ -149,7 +149,7 @@ get_header(); ?>
                 </div>
             </div>
             <div class="popular-jobs-item">
-                <div class="card-popular-job" style="background-image: url('https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/Popular-Jobs-4.webp');">
+                <div class="card-popular-job" style="background-image: url('/Popular-Jobs-4.webp');">
                     <div class="card-content">
                         <h3>Permanent</h3>
                         <ul>
@@ -173,7 +173,7 @@ get_header(); ?>
             <div class="col-lg-6 col-md-6 col-sm-12 how-works-left-col">
                 <div class="inner-how-works-col animated fadeInUp" data-class="fadeInUp">
                     <div class="how-works-img">
-                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/how-it-work-left-image.webp" alt="">
+                        <img src="/how-it-work-left-image.webp" alt="">
                     </div>
                 </div>
             </div>
@@ -252,7 +252,7 @@ get_header(); ?>
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="perk-card text-center">
                         <div class="perk-icon">
-                            <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/Better-Pay.svg" alt="Competitive Pay" class="svg-convert">
+                            <img src="/Better-Pay.svg" alt="Competitive Pay" class="svg-convert">
                         </div>
                         <div class="perk-content">
                             <h4>Better Pay</h4>
@@ -263,7 +263,7 @@ get_header(); ?>
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="perk-card text-center">
                         <div class="perk-icon">
-                            <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/Certificate-License-Reimbursements.svg" alt="Comprehensive Benefits" class="svg-convert">
+                            <img src="/Certificate-License-Reimbursements.svg" alt="Comprehensive Benefits" class="svg-convert">
                         </div>
                         <div class="perk-content">
                             <h4>Certificate & License Reimbursements</h4>
@@ -274,7 +274,7 @@ get_header(); ?>
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="perk-card text-center">
                         <div class="perk-icon">
-                            <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/Holiday-Pay.svg" alt="Flexible Scheduling" class="svg-convert">
+                            <img src="/Holiday-Pay.svg" alt="Flexible Scheduling" class="svg-convert">
                         </div>
                         <div class="perk-content">
                             <h4>Holiday Pay</h4>
@@ -285,7 +285,7 @@ get_header(); ?>
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
                     <div class="perk-card text-center">
                         <div class="perk-icon">
-                            <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/Better-Pay.svg" alt="24/7 Support" class="svg-convert">
+                            <img src="/Better-Pay.svg" alt="24/7 Support" class="svg-convert">
                         </div>
                         <div class="perk-content">
                             <h4>Health Insurance</h4>
@@ -296,7 +296,7 @@ get_header(); ?>
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
                     <div class="perk-card text-center">
                         <div class="perk-icon">
-                            <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/Weekly-Pay.svg" alt="Career Growth" class="svg-convert">
+                            <img src="/Weekly-Pay.svg" alt="Career Growth" class="svg-convert">
                         </div>
                         <div class="perk-content">
                             <h4>Weekly Pay</h4>
@@ -307,7 +307,7 @@ get_header(); ?>
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
                     <div class="perk-card text-center">
                         <div class="perk-icon">
-                            <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/Referral-Bonus.svg" alt="Prime Locations" class="svg-convert">
+                            <img src="/Referral-Bonus.svg" alt="Prime Locations" class="svg-convert">
                         </div>
                         <div class="perk-content">
                             <h4>Referral Bonus</h4>
@@ -327,28 +327,28 @@ get_header(); ?>
         <div class="reviews-wrap position-relative">
             <div class="floating-reviews">
                 <div class="review-avatar review-pos-1" data-aos="fade-right" data-aos-delay="100">
-                    <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/getty-images-_-zbpTrVZTo-unsplash-1.png" alt="Review">
+                    <img src="/getty-images-_-zbpTrVZTo-unsplash-1.png" alt="Review">
                 </div>
                  <div class="review-avatar review-pos-2" data-aos="fade-right" data-aos-delay="100">
-                    <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/chirsty.png" alt="Review">
+                    <img src="/chirsty.png" alt="Review">
                 </div>
                 <div class="review-avatar review-pos-3" data-aos="fade-right" data-aos-delay="100">
-                    <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/lable-image-3.png" alt="Review">
+                    <img src="/lable-image-3.png" alt="Review">
                 </div>
                  <div class="review-avatar review-pos-4" data-aos="fade-right" data-aos-delay="100">
-                    <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/chris-leipelt.png" alt="Review">
+                    <img src="/chris-leipelt.png" alt="Review">
                 </div>
                 <div class="review-avatar review-pos-5" data-aos="fade-right" data-aos-delay="100">
-                    <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/lable-image-2.png" alt="Review">
+                    <img src="/lable-image-2.png" alt="Review">
                 </div>
                  <div class="review-avatar review-pos-6" data-aos="fade-right" data-aos-delay="100">
-                    <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/usman-yousaf.png" alt="Review">
+                    <img src="/usman-yousaf.png" alt="Review">
                 </div>
                 <div class="review-avatar review-pos-7" data-aos="fade-right" data-aos-delay="100">
-                    <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/lable-image-1.png" alt="Review">
+                    <img src="/lable-image-1.png" alt="Review">
                 </div>
                 <div class="review-avatar review-pos-8" data-aos="fade-right" data-aos-delay="100">
-                    <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/getty-images-KaL3LbAmPPI-unsplash-1.png" alt="Review">
+                    <img src="/getty-images-KaL3LbAmPPI-unsplash-1.png" alt="Review">
                 </div>
             </div>
             
@@ -356,7 +356,7 @@ get_header(); ?>
                 <p class="text-primary"><strong>Reviews</strong></p>
                 <h2 class="mb-4">Recommended By<br>Hundreds Of Happy<br>Healthcare Professionals</h2>
                 <div class="google-rating d-inline-flex align-items-center gap-2 mb-0">
-                    <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/google-review.svg" alt="Google" width="20">
+                    <img src="/google-review.svg" alt="Google" width="20">
                 </div>
             </div>
         </div>
@@ -393,23 +393,23 @@ get_header(); ?>
                     <h3 class="job-title">Travel Nurse/Registered Nurse (RN) – MedSurg/Telemetry</h3>
                     <ul class="job-info">
                         <li>
-                            <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-location-icon.svg" alt="">
+                            <img src="/job-location-icon.svg" alt="">
                             <span><strong>Location:</strong> Charlotte, North Carolina, USA</span>
                         </li>
                         <li>
-                            <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Specialty-icon.svg" alt="">
+                            <img src="/job-Specialty-icon.svg" alt="">
                             <span><strong>Specialty:</strong> Health Care</span>
                         </li>
                         <li>
-                            <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-type-icon.svg" alt="">
+                            <img src="/job-type-icon.svg" alt="">
                             <span><strong>Type:</strong> Contract</span>
                         </li>
                         <li>
-                            <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Schedule-icon.svg" alt="">
+                            <img src="/job-Schedule-icon.svg" alt="">
                             <span><strong>Schedule:</strong> Lorem ipsum</span>
                         </li>
                         <li>
-                            <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-time-icon.svg" alt="">
+                            <img src="/job-time-icon.svg" alt="">
                             <span><strong>Time:</strong> Lorem ipsum</span>
                         </li>
                     </ul>
@@ -428,23 +428,23 @@ get_header(); ?>
                     <h3 class="job-title">Travel Nurse/Registered Nurse (RN) – MedSurg/Telemetry</h3>
                     <ul class="job-info">
                         <li>
-                            <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-location-icon.svg" alt="">
+                            <img src="/job-location-icon.svg" alt="">
                             <span><strong>Location:</strong> Charlotte, North Carolina, USA</span>
                         </li>
                         <li>
-                            <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Specialty-icon.svg" alt="">
+                            <img src="/job-Specialty-icon.svg" alt="">
                             <span><strong>Specialty:</strong> Health Care</span>
                         </li>
                         <li>
-                            <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-type-icon.svg" alt="">
+                            <img src="/job-type-icon.svg" alt="">
                             <span><strong>Type:</strong> Contract</span>
                         </li>
                         <li>
-                            <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Schedule-icon.svg" alt="">
+                            <img src="/job-Schedule-icon.svg" alt="">
                             <span><strong>Schedule:</strong> Lorem ipsum</span>
                         </li>
                         <li>
-                            <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-time-icon.svg" alt="">
+                            <img src="/job-time-icon.svg" alt="">
                             <span><strong>Time:</strong> Lorem ipsum</span>
                         </li>
                     </ul>
@@ -463,23 +463,23 @@ get_header(); ?>
                     <h3 class="job-title">Travel Nurse/Registered Nurse (RN) – MedSurg/Telemetry</h3>
                     <ul class="job-info">
                         <li>
-                            <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-location-icon.svg" alt="">
+                            <img src="/job-location-icon.svg" alt="">
                             <span><strong>Location:</strong> Charlotte, North Carolina, USA</span>
                         </li>
                         <li>
-                            <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Specialty-icon.svg" alt="">
+                            <img src="/job-Specialty-icon.svg" alt="">
                             <span><strong>Specialty:</strong> Health Care</span>
                         </li>
                         <li>
-                            <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-type-icon.svg" alt="">
+                            <img src="/job-type-icon.svg" alt="">
                             <span><strong>Type:</strong> Contract</span>
                         </li>
                         <li>
-                            <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-Schedule-icon.svg" alt="">
+                            <img src="/job-Schedule-icon.svg" alt="">
                             <span><strong>Schedule:</strong> Lorem ipsum</span>
                         </li>
                         <li>
-                            <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/job-time-icon.svg" alt="">
+                            <img src="/job-time-icon.svg" alt="">
                             <span><strong>Time:</strong> Lorem ipsum</span>
                         </li>
                     </ul>
@@ -597,7 +597,7 @@ get_header(); ?>
             <div class="blog-item">
                 <div class="card-blog">
                     <div class="card-media">
-                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/home-blog-image-1.webp" alt="Blog Image">
+                        <img src="/home-blog-image-1.webp" alt="Blog Image">
                     </div>
                     <div class="card-body">
                         <div class="card-category">Lorem Ipsum</div>
@@ -611,7 +611,7 @@ get_header(); ?>
             <div class="blog-item">
                 <div class="card-blog">
                     <div class="card-media">
-                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/home-blog-image-2.webp" alt="Blog Image">
+                        <img src="/home-blog-image-2.webp" alt="Blog Image">
                     </div>
                     <div class="card-body">
                         <div class="card-category">Lorem Ipsum</div>
@@ -625,7 +625,7 @@ get_header(); ?>
             <div class="blog-item">
                 <div class="card-blog">
                     <div class="card-media">
-                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/home-blog-image-3.webp" alt="Blog Image">
+                        <img src="/home-blog-image-3.webp" alt="Blog Image">
                     </div>
                     <div class="card-body">
                         <div class="card-category">Lorem Ipsum</div>
@@ -639,7 +639,7 @@ get_header(); ?>
             <div class="blog-item">
                 <div class="card-blog">
                     <div class="card-media">
-                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/home-blog-image-4.webp" alt="Blog Image">
+                        <img src="/home-blog-image-4.webp" alt="Blog Image">
                     </div>
                     <div class="card-body">
                         <div class="card-category">Lorem Ipsum</div>
@@ -653,7 +653,7 @@ get_header(); ?>
             <!-- <div class="blog-item">
                 <div class="card-blog">
                     <div class="card-media">
-                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/home-blog-image-4.webp" alt="Blog Image">
+                        <img src="/home-blog-image-4.webp" alt="Blog Image">
                     </div>
                     <div class="card-body">
                         <div class="card-category">Lorem Ipsum</div>
@@ -674,7 +674,7 @@ get_header(); ?>
 </section>
 <!-- blogs-sections end -->
 
-<section class="recruiters-section space-y" style="background-image: url('https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/Recruiters-bg-image-scaled.png')">
+<section class="recruiters-section space-y" style="background-image: url('/Recruiters-bg-image-scaled.png')">
     <div class="container">
         <div class="section-header mb-5m text-center" data-aos="fade-up">
             <div class="inner-wrap">
@@ -687,7 +687,7 @@ get_header(); ?>
             <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
                 <div class="card-recruiters h-100 text-center">
                     <div class="profile-image mx-auto mb-4">
-                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/Find-Work-image.png" alt="Find Work Profile" class="rounded-circle">
+                        <img src="/Find-Work-image.png" alt="Find Work Profile" class="rounded-circle">
                     </div>
                     <h3>Find Work</h3>
                     <p class="mb-4">Yorem ipsum dolor sit amet, consectetur adipiscing elit dolor sit amet.</p>
@@ -701,7 +701,7 @@ get_header(); ?>
             <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="200">
                 <div class="card-recruiters h-100 text-center">
                     <div class="profile-image mx-auto mb-4">
-                        <img src="https://staging.project-progress.net/projects/loremipsum/wp-content/uploads/2025/05/Find-Staff-image.png" alt="Find Staff Profile" class="rounded-circle">
+                        <img src="/Find-Staff-image.png" alt="Find Staff Profile" class="rounded-circle">
                     </div>
                     <h3>Find Staff</h3>
                     <p class="mb-4">Yorem ipsum dolor sit amet, consectetur adipiscing elit dolor sit amet.</p>
