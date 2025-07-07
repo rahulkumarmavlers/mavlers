@@ -6,7 +6,11 @@ get_header(); ?>
 
 <section class="banner-form-section">
     <div class="banner-section narrow-banner has-overlay">
+<<<<<<< HEAD
         <div class="bg-media" style="background-image: url(/getty-images-_-zbpTrVZTo-unsplash-1-2.png)"></div>
+=======
+        <div class="bg-media"></div>
+>>>>>>> 1ade5c0434111ce1cff982962f5ab2ce3a8d8fd6
         <div class="container">
             <div class="row justify-content-center text-center">
                 <div class="col-12 col-md-8" data-aos="fade-up" data-aos-delay="50">
