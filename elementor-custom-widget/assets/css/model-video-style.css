@@ -1,0 +1,12 @@
+section.video-parallax { height: 475px; display: flex; align-items: center; justify-content: center; padding: 50px 20px;cursor: pointer; background-attachment: fixed;background-position: center;background-size: cover;} 
+
+section.video-parallax img { display: block; } 
+.video-parallax-popup { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999; overflow: auto; display: flex; align-items: center; justify-content: center;padding: 30px 30px;} 
+.overlay { background: rgb(29 37 45 / 90%); position: fixed; width: 100%; height: 100%; left: 0; top: 0; } 
+.video-parallax-popup-inner { width: 85vw; margin: 0 auto;} 
+.video-parallax-popup-inner .close { position: absolute; margin-top: -35px; right: 30px; cursor: pointer; z-index: 1; }
+.video-parallax-popup-inner iframe{position: relative;}
+@media(max-width:1024px){
+    section.video-parallax { height: 375px;}
+    .video-parallax-popup-inner { width: 95vw;}
+}
